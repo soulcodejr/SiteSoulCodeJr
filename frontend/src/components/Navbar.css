@@ -12,6 +12,15 @@
   gap: 4px;
 }
 
+#process-btn{
+  padding: 1rem;
+}
+
+#process-btn p{
+  margin: 0;
+  background-color: transparent;
+}
+
 .image-container h2 {
   font-weight: 500;
 }
@@ -27,6 +36,25 @@
   font-size: 18px;
 }
 
-#process-btn a{
-  background-color: transparent;
+
+@media (max-width: 800px){
+  .center-navs-container{
+    width: 75%;
+    gap: 6px;
+  }
+
+  .center-navs-container nav a {
+    font-size: 16px;
+  }
+
+  #process-btn{
+    flex-shrink: 1;
+    padding: .6rem;
+  }
+}
+
+@media (max-width:500px){
+  .center-navs-container nav a{
+    font-size: 14px;
+  }
 }
