@@ -1,4 +1,3 @@
-import React from "react";
 import { FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa";
 import './Footer.css'
 import logo from "../assets/react.svg"
@@ -18,19 +17,19 @@ const Footer = () => {
         </div>
         <div className="social-icons-container">
           <a href="" className="social-icons">
-          <FaLinkedin/>
+            <FaLinkedin />
           </a>
           <a href="" className="social-icons">
-            <FaXTwitter/>
+            <FaXTwitter />
           </a>
           <a href="" className="social-icons">
-            <FaInstagram/>
+            <FaInstagram />
           </a>
           <a href="" className="social-icons">
-            <FaFacebook/>
+            <FaFacebook />
           </a>
           <a href="" className="social-icons">
-            <FaThreads/>
+            <FaThreads />
           </a>
         </div>
       </div>

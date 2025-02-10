@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { MdArrowOutward } from "react-icons/md";
 import { useState } from "react";
 import logo from "../assets/react.svg";
@@ -19,7 +19,7 @@ const Navbar = () => {
     <div className="navbar-container">
       <div className="image-container">
         <img src={logo} alt="SoulCode Logo" id="logo" />
-        {width > 800? <h2>SoulCodeJr</h2> : ""}
+        {width > 800 ? <h2>SoulCodeJr</h2> : ""}
 
 
       </div>
@@ -43,7 +43,7 @@ const Navbar = () => {
 
       <a href="/processo-seletivo">
         <button id="process-btn" className="primary-btn">
-          {width > 800? <p>Processo Seletivo</p>: ""}
+          {width > 800 ? <p>Processo Seletivo</p> : ""}
           <MdArrowOutward />
         </button>
       </a>
