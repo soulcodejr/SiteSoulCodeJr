@@ -1,19 +1,35 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
   text-align: center;
-
+  padding: 1rem;
 }
 
 * {
   background-color: #000;
   --main-purple: #130b35;
+  --main-blue: #512FEB;
   font-family: "Roboto", serif;
   box-sizing: border-box;
 }
 
 
+.primary-btn{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--main-blue);
+  transition: .5s;
+  gap: 4px;
+}
+
+.primary-btn svg{
+  background-color: transparent;
+}
+
+.primary-btn:hover{
+  background-color: transparent;
+  color: var(--main-blue);
+  letter-spacing: .5px;
+}
 
 
 
@@ -39,4 +55,8 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.App{
+  height: 80vh;
 }
