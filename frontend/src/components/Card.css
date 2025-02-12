@@ -33,6 +33,10 @@
 
 }
 
+.duvidas-icon {
+    background-color: transparent;
+}
+
 .duvidas-resposta.open {
     max-height: 40rem;
     opacity: 1;

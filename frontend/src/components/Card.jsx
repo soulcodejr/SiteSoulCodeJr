@@ -12,9 +12,13 @@ const Card = ({ pergunta, resposta }) => {
             <div className="content">
                 <div className='duvidas-pergunta'>{pergunta}</div>
                 {isOpen ? (
-                    <MdOutlineKeyboardArrowUp />
+                    <div>
+                        <MdOutlineKeyboardArrowUp className="duvidas-icon" />
+                    </div>
                 ) : (
-                    <MdOutlineKeyboardArrowDown />
+                    <div className="duvidas-icon">
+                        <MdOutlineKeyboardArrowDown className="duvidas-icon" />
+                    </div>
                 )}
             </div>
                 
