@@ -1,0 +1,40 @@
+.card-container {
+    background-color: rgba(149, 149, 149, 0.1) ;
+
+    border: 1px solid grey;
+    border-radius: 1rem;
+
+    padding: 1rem;
+    margin: 1rem auto;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.content {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+}
+
+.duvidas-pergunta {
+    font-size: 1.1rem;
+    font-weight: 600;
+    background-color: transparent;
+}
+
+.duvidas-resposta {
+    background-color: transparent;
+    font-size: 1rem;
+    max-height: 0px;
+    opacity: 0;
+    transition: max-height 0.3s ease-out;
+    overflow: hidden;
+
+}
+
+.duvidas-resposta.open {
+    max-height: 40rem;
+    opacity: 1;
+    transition: max-height 0.5s ease-in, opacity 2s ease;
+}
