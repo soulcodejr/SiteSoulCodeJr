@@ -18,7 +18,7 @@ const Navbar = () => {
   return (
     <div className="navbar-container">
       <div className="image-container">
-        <img src={logo} alt="SoulCode Logo" class="logo" />
+        <img src={logo} alt="SoulCode Logo" className="logo" />
         {width > 800 ? <h2>SoulCodeJr</h2> : ""}
 
 
