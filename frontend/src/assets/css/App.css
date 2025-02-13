@@ -11,6 +11,15 @@
   box-sizing: border-box;
 }
 
+.App{
+  height: 80vh;
+}
+
+.logo{
+  width: 30px;
+  height: 40px;
+  padding: 0px 2px;
+}
 
 .primary-btn{
   display: flex;
@@ -29,39 +38,4 @@
   background-color: transparent;
   color: var(--main-blue);
   letter-spacing: .5px;
-}
-
-.logo{
-  width: 40px;
-  height: 40px;
-}
-
-
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-.App{
-  height: 80vh;
 }

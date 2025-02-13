@@ -1,6 +1,6 @@
 import { FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa";
 import './Footer.css'
-import logo from "../assets/logoSC.jpeg"
+import logo from "../assets/img/logoSC.png"
 import { FaXTwitter, FaThreads } from "react-icons/fa6";
 
 

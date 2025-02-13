@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { MdArrowOutward } from "react-icons/md";
 import { useState } from "react";
-import logo from "../assets/logoSC.jpeg"
+import logo from "../assets/img/logoSC.png"
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -41,7 +41,7 @@ const Navbar = () => {
         </nav>
       </div>
 
-      <a href="/processo-seletivo">
+      <a href="/SiteSoulCodeJr/processo-seletivo">
         <button id="process-btn" className="primary-btn">
           {width > 800 ? <p>Processo Seletivo</p> : ""}
           <MdArrowOutward />
