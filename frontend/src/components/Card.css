@@ -4,6 +4,8 @@
     border: 1px solid grey;
     border-radius: 1rem;
 
+    width: 100%;
+
     padding: 1rem;
     margin: 1rem auto;
     cursor: pointer;
@@ -34,6 +36,18 @@
 }
 
 .duvidas-icon {
+    background-color: transparent;
+}
+
+.duvidas-icon-div {
+    background-color: transparent;
+}
+
+.duvidas-icon.open {
+    background-color: transparent;
+}
+
+.duvidas-icon-div.open {
     background-color: transparent;
 }
 
