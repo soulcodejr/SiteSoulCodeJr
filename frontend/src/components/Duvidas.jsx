@@ -4,10 +4,10 @@ import './Duvidas.css'
 
 const Duvidas = () => {
     return ( 
-        <div className='duvidas-container beam'>
+        <div className='duvidas-container'>
             <h1 className='outfit-bold'>Dúvidas gerais</h1>
             <h3 className='outfit-normal'>Informações gerais</h3>
-            <div className="duvidas-lista">
+            <div className="duvidas-lista beam">
                 {perguntas.map((item, index) => (
                     <Card 
                         key={index}

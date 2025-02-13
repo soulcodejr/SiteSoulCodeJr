@@ -8,7 +8,7 @@ const Card = ({ pergunta, resposta }) => {
 
     
     return (
-        <div className='card-container' onClick={() => setIsOpen(!isOpen)}>
+        <div className='card-container beam' onClick={() => setIsOpen(!isOpen)}>
             <div className="content">
                 <div className='duvidas-pergunta'>{pergunta}</div>
                 {isOpen ? (
@@ -17,7 +17,7 @@ const Card = ({ pergunta, resposta }) => {
                     </div>
                 ) : (
                     <div className={`duvidas-icon-div ${isOpen ? 'open' : ''}`}>
-                        <MdOutlineKeyboardArrowDown className="duvidas-icon" />
+                        <MdOutlineKeyboardArrowDown className="duvidas-icon" size={20} />
                     </div>
                 )}
             </div>

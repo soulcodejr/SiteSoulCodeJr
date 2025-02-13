@@ -13,6 +13,10 @@
     transition: all 0.3s ease;
 }
 
+.card-container.beam {
+    overflow: hidden;
+  }
+
 .content {
     background-color: transparent;
     display: flex;
@@ -32,6 +36,7 @@
     opacity: 0;
     transition: max-height 0.3s ease-out;
     overflow: hidden;
+    text-align: left;
 
 }
 
@@ -53,6 +58,6 @@
 
 .duvidas-resposta.open {
     max-height: 40rem;
-    opacity: 1;
-    transition: max-height 0.5s ease-in, opacity 2s ease;
+    opacity: 0.8;
+    transition: max-height 0.8s ease-in, opacity 2s ease;
 }
