@@ -25,7 +25,7 @@ const Navbar = () => {
       </div>
       <div className="center-navs-container">
         <nav>
-          <a href="">Equipe</a>
+          <a href="/SiteSoulCodeJr/nossa-equipe">Equipe</a>
         </nav>
         <nav>
           <a href="">Serviços</a>
@@ -41,7 +41,7 @@ const Navbar = () => {
         </nav>
       </div>
 
-      <a href="/processo-seletivo">
+      <a href="/SiteSoulCodeJr/processo-seletivo">
         <button id="process-btn" className="primary-btn">
           {width > 800 ? <p>Processo Seletivo</p> : ""}
           <MdArrowOutward />
