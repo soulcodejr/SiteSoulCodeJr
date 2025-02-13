@@ -1,6 +1,6 @@
 import { FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa";
 import './Footer.css'
-import logo from "../assets/react.svg"
+import logo from "../assets/logoSC.jpeg"
 import { FaXTwitter, FaThreads } from "react-icons/fa6";
 
 
@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="main-container">
         <div className="presentation-container">
           <div className="logo-container">
-            <img src={logo} alt="SoulCodeLogo" />
+            <img src={logo} alt="SoulCodeLogo" className="logo"/>
             <h2>SoulCodeJr</h2>
           </div>
           <p>Empresa Júnior de Tecnologia</p>

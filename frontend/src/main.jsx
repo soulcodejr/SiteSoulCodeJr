@@ -1,4 +1,5 @@
 import React from "react";
+import {Route} from "react-router-dom"
 import ReactDOM from "react-dom/client";
 import App from "./components/App";
 import "./assets/css/index.css";

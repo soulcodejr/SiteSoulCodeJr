@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { MdArrowOutward } from "react-icons/md";
 import { useState } from "react";
-import logo from "../assets/react.svg";
+import logo from "../assets/logoSC.jpeg"
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -18,7 +18,7 @@ const Navbar = () => {
   return (
     <div className="navbar-container">
       <div className="image-container">
-        <img src={logo} alt="SoulCode Logo" id="logo" />
+        <img src={logo} alt="SoulCode Logo" class="logo" />
         {width > 800 ? <h2>SoulCodeJr</h2> : ""}
 
 
