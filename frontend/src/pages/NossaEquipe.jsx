@@ -1,11 +1,12 @@
 import CardEquipe from "../components/CardEquipe"
+import estefanioImage from '../assets/estefanio.jpg'; 
 
 function NossaEquipe() {
     return (
         <div>
             <h1>Uma equipe de excelência    </h1>
             <div className="card__container">
-                <CardEquipe image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7_XL5idt8CoBA0djjHXy0D4SI_39oiHfu3A&s" name="Estefanio Silva" role="Presidente e PM"/>
+                <CardEquipe image={estefanioImage}  name="Estefanio Silva" role="Presidente e PM"/>
                 <CardEquipe name="Ausberto" role="Eng. de Software" />
                 <CardEquipe name="José Lúcio" role="Dev SecOps" />
                 <CardEquipe name="Maria Oliveira" role="Desenvolvedora Front-end" />
