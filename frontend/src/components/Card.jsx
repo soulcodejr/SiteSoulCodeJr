@@ -13,11 +13,11 @@ const Card = ({ pergunta, resposta }) => {
                 <div className='duvidas-pergunta'>{pergunta}</div>
                 {isOpen ? (
                     <div className={`duvidas-icon-div ${isOpen ? 'open' : ''}`}>
-                        <MdOutlineKeyboardArrowUp className="duvidas-icon" />
+                        <MdOutlineKeyboardArrowUp className="duvidas-icon" size={22} />
                     </div>
                 ) : (
                     <div className={`duvidas-icon-div ${isOpen ? 'open' : ''}`}>
-                        <MdOutlineKeyboardArrowDown className="duvidas-icon" size={20} />
+                        <MdOutlineKeyboardArrowDown className="duvidas-icon" size={22} />
                     </div>
                 )}
             </div>
