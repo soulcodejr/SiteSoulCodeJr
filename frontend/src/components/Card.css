@@ -1,8 +1,8 @@
 .card-container {
     background-color: rgba(149, 149, 149, 0.1) ;
 
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 1.3rem;
+    border: 1px solid grey;
+    border-radius: 1rem;
 
     width: 100%;
 
