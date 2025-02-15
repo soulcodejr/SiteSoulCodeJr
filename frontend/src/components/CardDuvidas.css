@@ -1,4 +1,4 @@
-.card-container {
+.cardDuvidas-container {
     background-color: rgba(149, 149, 149, 0.1) ;
 
     border: 1px solid grey;
@@ -13,7 +13,7 @@
     transition: all 0.3s ease;
 }
 
-.card-container.beam {
+.cardDuvidas-container.beam {
     overflow: hidden;
   }
 

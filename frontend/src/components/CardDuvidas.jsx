@@ -1,14 +1,14 @@
 import { useState } from "react";
-import './Card.css'
+import './CardDuvidas.css'
 import { MdOutlineKeyboardArrowUp, MdOutlineKeyboardArrowDown } from "react-icons/md";
 
 
-const Card = ({ pergunta, resposta }) => {
+const CardDuvidas = ({ pergunta, resposta }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     
     return (
-        <div className='card-container beam' onClick={() => setIsOpen(!isOpen)}>
+        <div className='cardDuvidas-container beam' onClick={() => setIsOpen(!isOpen)}>
             <div className="content">
                 <div className='duvidas-pergunta'>{pergunta}</div>
                 {isOpen ? (
@@ -30,4 +30,4 @@ const Card = ({ pergunta, resposta }) => {
     );
 }
  
-export default Card;
+export default CardDuvidas;

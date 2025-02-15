@@ -1,6 +1,9 @@
-import Card from './Card';
-import perguntas from '../data/FAQ.json'
-import './Duvidas.css'
+
+import CardDuvidas from './CardDuvidas';
+
+import perguntas from '../data/FAQ.json';
+
+import './Duvidas.css';
 
 const Duvidas = () => {
     return ( 
@@ -9,7 +12,7 @@ const Duvidas = () => {
             <h3 className='outfit-normal'>Informações gerais</h3>
             <div className="duvidas-lista beam">
                 {perguntas.map((item, index) => (
-                    <Card 
+                    <CardDuvidas
                         key={index}
                         pergunta={item.pergunta}
                         resposta={item.resposta}
