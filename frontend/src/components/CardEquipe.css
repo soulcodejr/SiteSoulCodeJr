@@ -1,0 +1,42 @@
+.card__container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:space-evenly;
+    gap: 25px;
+    margin-top: 20px;
+  }
+
+
+.card {
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border-radius: 20px;
+    width: 300px;
+    margin: 10px;
+    overflow: hidden;
+}
+
+.card__header {
+    padding: 15px;
+}
+
+.card__title {
+    margin: 0;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.card__subtitle {
+    margin: 5px 0 0;
+    color: #888;
+    text-align: left;
+}
+
+.card__image {
+    height: 200px;
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
