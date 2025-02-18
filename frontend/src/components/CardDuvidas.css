@@ -1,10 +1,13 @@
 .cardDuvidas-container {
     background-color: rgba(149, 149, 149, 0.1) ;
 
-    border: 1px solid grey;
-    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 1.3rem;
+
+    gap: 16;
 
     width: 100%;
+    height: 4rem;
 
     padding: 1rem;
     margin: 1rem auto;
