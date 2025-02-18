@@ -24,7 +24,10 @@
     color: rgba(255,255,255, 70%);
     border: 1px solid rgba(128, 128, 128, 0.5);
     margin-bottom: 25px;
+    cursor: text;
+    color: rgba(255, 255, 255, 70%);
 }
+
 
 .duvidas-container, 
 .duvidas-container * {
@@ -48,7 +51,7 @@
 .duvidas-lista {
     position: relative;
     overflow: hidden;
-    max-width: 70%;
+    max-width: 60rem;
     margin: 0 auto;
 }
 
