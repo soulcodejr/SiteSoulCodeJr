@@ -1,21 +1,8 @@
 
 .duvidas-container {
     padding: 2.5rem;
-
     transition: 0.6s ease-out, transform 0.6s ease-out;
 }
-
-/* .duvidas-container.beam::before {
-    content: '';
-    position: absolute;
-    width: 40px;
-    height: 700px;
-    background-color: rgba(81, 47, 235, 0.9);
-    filter: blur(90px);
-    transform: rotate(65deg);
-    border-radius: 50%;
-    
-} */
 
 .duvidas-button {
     font-size: 14px;
@@ -28,7 +15,7 @@
 }
 
 
-.duvidas-container, 
+.duvidas-container,
 .duvidas-container * {
     font-family: "Outfit", sans-serif;
 }
@@ -48,16 +35,19 @@
 
 
 .duvidas-lista {
+    display: flex;
+    flex-direction: column;
     position: relative;
     overflow: hidden;
     max-width: 60rem;
+
     margin: 0 auto;
 }
 
 .duvidas-lista.beam::before {
     content: '';
     position: absolute;
-    width: 100%; 
+    width: 100%;
     height: 16px;
     top: 50%;
     left: 50%;
@@ -66,4 +56,12 @@
     transform: translate(-50%, -50%) rotate(-10deg);
     border-radius: 100%;
     z-index: 0;
+}
+
+
+
+@media (max-width: 1000px){
+    .duvidas-lista{
+        max-width: 90%;
+    }
 }

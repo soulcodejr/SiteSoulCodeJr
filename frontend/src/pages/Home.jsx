@@ -8,6 +8,7 @@ export default function Home() {
     <div className="home">
       <h1>HOME PAGE</h1>
       <Planos />
+
       <Duvidas />
       <div>
 
@@ -15,3 +16,4 @@ export default function Home() {
     </div>
   );
 }
+

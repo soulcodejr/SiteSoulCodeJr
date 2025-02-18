@@ -1,5 +1,5 @@
 .cardDuvidas-container {
-    background-color: rgba(149, 149, 149, 0.1) ;
+  background-color: rgba(149, 149, 149, 0.1);
 
     border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 1.3rem;
@@ -9,58 +9,57 @@
     width: 100%;
     height: 4rem;
 
-    padding: 1rem;
-    margin: 1rem auto;
-    cursor: pointer;
+  padding: 1rem;
+  margin: 1rem auto;
+  cursor: pointer;
 
-    transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .cardDuvidas-container.beam {
-    overflow: hidden;
-  }
+  overflow: hidden;
+}
 
 .content {
-    background-color: transparent;
-    display: flex;
-    justify-content: space-between;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
 }
 
 .duvidas-pergunta {
-    font-size: 1.1rem;
-    font-weight: 600;
-    background-color: transparent;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: transparent;
 }
 
 .duvidas-resposta {
-    background-color: transparent;
-    font-size: 1rem;
-    max-height: 0px;
-    opacity: 0;
-    transition: max-height 0.3s ease-out;
-    overflow: hidden;
-    text-align: left;
-
+  background-color: transparent;
+  font-size: 1rem;
+  max-height: 0px;
+  opacity: 0;
+  transition: max-height 0.3s ease-out;
+  overflow: hidden;
+  text-align: left;
 }
 
 .duvidas-icon {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 .duvidas-icon-div {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 .duvidas-icon.open {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 .duvidas-icon-div.open {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 .duvidas-resposta.open {
-    max-height: 40rem;
-    opacity: 0.8;
-    transition: max-height 0.8s ease-in, opacity 2s ease;
+  max-height: 40rem;
+  opacity: 0.8;
+  transition: max-height 0.8s ease-in, opacity 2s ease;
 }
