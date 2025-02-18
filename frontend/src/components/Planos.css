@@ -1,11 +1,12 @@
 
-.duvidas-container {
+.planos-container {
     padding: 2.5rem;
+
 
     transition: 0.6s ease-out, transform 0.6s ease-out;
 }
 
-/* .duvidas-container.beam::before {
+/* .planos-container.beam::before {
     content: '';
     position: absolute;
     width: 40px;
@@ -17,7 +18,7 @@
     
 } */
 
-.duvidas-button {
+.planos-button {
     font-size: 14px;
     background-color: rgba(13,13,13,100%);
     color: rgba(255,255,255, 70%);
@@ -28,33 +29,35 @@
 }
 
 
-.duvidas-container, 
-.duvidas-container * {
+.planos-container, 
+.planos-container * {
     font-family: "Outfit", sans-serif;
 }
 
-.duvidas-resposta p {
+.planos-resposta p {
     background-color: transparent;
 }
 
-.duvidas-container h1 {
+.planos-container h1 {
     margin-bottom: 10px;
 }
 
-.duvidas-container h3 {
+.planos-container h3 {
     color: rgba(255,255,255,80%);
     margin-bottom: 60px;
 }
 
 
-.duvidas-lista {
+.planos-lista {
+    display: flex;
+    justify-content: space-around;
     position: relative;
     overflow: hidden;
-    max-width: 60rem;
-    margin: 0 auto;
+    width: 70rem;
+    
 }
 
-.duvidas-lista.beam::before {
+.planos-lista.beam::before {
     content: '';
     position: absolute;
     width: 100%; 

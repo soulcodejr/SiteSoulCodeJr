@@ -1,11 +1,17 @@
-import styled from "styled-components"
+import Duvidas from "../components/Duvidas";
+import Planos from "../components/Planos";
+import './Home.css'
+
 
 export default function Home() {
-    return (
-        <Container><h1>HOME PAGE</h1></Container>
-    )
-}
+  return (
+    <div className="home">
+      <h1>HOME PAGE</h1>
+      <Planos />
+      <Duvidas />
+      <div>
 
-const Container = styled.div`
-    
-`
+      </div>
+    </div>
+  );
+}
