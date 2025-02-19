@@ -1,0 +1,66 @@
+
+services:
+  pg-docker:
+    image: postgres
+    container_name: postgres_db
+    restart: always
+    ports:
+      - 5433:5432 # Coloquei esta porta 5435 para não dar conflito com alguém
+    env_file:
+      - .env
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - soulCode-network
+
+  #  backend:
+  #    build:
+  #      context: .
+  #      dockerfile: Dockerfile
+  #    container_name: soulCode_backend
+  #    restart: always
+  #    depends_on:
+  #      - pg-docker
+  #    env_file:
+  #      - .env
+  #    environment:
+  #      SPRING_DATASOURCE_URL: ${SPRING_DATASOURCE_URL}
+  #      SPRING_DATASOURCE_USERNAME: ${SPRING_DATASOURCE_USERNAME}
+  #      SPRING_DATASOURCE_PASSWORD: ${SPRING_DATASOURCE_PASSWORD}
+  #    ports:
+  #      - "8080:8080"
+  #    volumes:
+  #      - /target:/app/target
+  #    networks:
+  #      - soulCode-network
+
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin_soulCode
+    restart: always
+    depends_on:
+      - pg-docker
+    env_file:
+      - .env
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
+    ports:
+      - "5050:80"
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    networks:
+      - soulCode-network
+
+volumes:
+  postgres_data:
+  pgadmin_data:
+
+networks:
+  soulCode-network:
+    driver: bridge
