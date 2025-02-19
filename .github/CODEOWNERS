@@ -1,0 +1,7 @@
+# Define quem revisa PRs para cada parte do projeto
+
+# Quem irá revisar os PRs do front end
+/frontend/ @JuliannaRkg544 @juanzeen
+
+# Quem irá revisar os PRs do back End
+/backend/ @Filipe-Samuel-p
