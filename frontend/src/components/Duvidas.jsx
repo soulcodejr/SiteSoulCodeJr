@@ -8,6 +8,7 @@ import './Duvidas.css';
 const Duvidas = () => {
     return ( 
         <div className='duvidas-container'>
+            <button className='duvidas-button'>Dúvidas</button>
             <h1 className='outfit-bold'>Dúvidas gerais</h1>
             <h3 className='outfit-normal'>Informações gerais</h3>
             <div className="duvidas-lista beam">
