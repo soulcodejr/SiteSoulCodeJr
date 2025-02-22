@@ -1,0 +1,46 @@
+.plans-card__div {
+    
+    height: 100%;
+    display: flex;
+    background: linear-gradient(149deg, rgba(81, 47, 235, 0.15) 0%, rgba(255, 255, 255, 0.06) 29%, rgba(255, 255, 255, 0.06) 74%, rgba(81, 47, 235, 0.15) 100%);
+
+    border-radius: 8px;
+}
+
+.plan-card__title {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.plan-card__benefit p {
+    margin: 0;
+    font-size: 1rem; 
+    /* line-height: 1.2;  */
+}
+
+.plan-card__benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    margin-top: 2.2rem;
+    padding: 0;
+}
+
+.plan-card__benefit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0px;
+}
+
+.plan-card__benefit-icon {
+    background-color: rgba(255, 255, 255, 20%); /* Cor de fundo */
+    color: white; /* Cor do ícone */
+    border-radius: 8px; /* Faz o fundo ficar circular */
+    padding: 0.3rem; /* Espaçamento interno para o ícone */
+    display: flex; /* Garante que o ícone seja centralizado no fundo */
+    align-items: center;
+    justify-content: center;
+}

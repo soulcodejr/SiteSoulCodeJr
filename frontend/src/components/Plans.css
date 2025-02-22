@@ -1,0 +1,79 @@
+.plans__container {
+    margin-top: 25rem;
+    width: 70rem;
+    height: 34rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 30px;
+    
+
+}
+
+.plans__button-group {
+    box-sizing: border-box;
+    width: 10.875rem;
+    height: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.06);
+    
+    align-content: center;
+    flex-wrap: nowrap;
+    gap: 10px;
+
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);   
+}
+
+.plans__button--annual {
+    box-sizing: border-box;
+    width: 5rem;
+    height: 2.375rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    background: rgb(81, 47, 235);
+    border-radius: 6px;
+    padding: 8px 10px 8px 10px;
+    overflow: hidden;
+    z-index: 2;
+    align-content: center;
+    flex-wrap: nowrap;
+    gap: 10;
+}
+
+.plans__button--monthly {
+    box-sizing: border-box;
+
+    background: transparent;
+    width: 5rem;
+    height: 2.375rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 10px 8px 10px;
+    overflow: hidden;
+    z-index: 2;
+    align-content: center;
+    flex-wrap: nowrap;
+    gap: 10;
+    border-radius: 6px;
+}
+
+.plans__list {
+    display: flex;
+    width: 100%;
+    height: 29.3rem;
+    justify-content: space-between;
+    gap: 2rem;
+}

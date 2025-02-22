@@ -1,13 +1,13 @@
 import Duvidas from "../components/Duvidas";
-import Planos from "../components/Planos";
+import Plans from "../components/Plans";
 import './Home.css'
 
 
 export default function Home() {
   return (
     <div className="home">
-      <h1>HOME PAGE</h1>
-      {/* <Planos /> */}
+     
+      <Plans />
 
       <Duvidas />
       <div>
