@@ -14,6 +14,7 @@
 }
 
 .plans__button-group {
+    position: relative;
     box-sizing: border-box;
     width: 10.875rem;
     height: 3rem;
@@ -32,43 +33,48 @@
     border: 1px solid rgba(255, 255, 255, 0.1);   
 }
 
-.plans__button--annual {
-    box-sizing: border-box;
-    width: 5rem;
+.plans__button-background {
+    position: absolute;
+    left: 50%;
+    width: 4.938rem;
     height: 2.375rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
     background: rgb(81, 47, 235);
-    border-radius: 6px;
-    padding: 8px 10px 8px 10px;
-    overflow: hidden;
-    z-index: 2;
-    align-content: center;
-    flex-wrap: nowrap;
-    gap: 10;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
 }
 
-.plans__button--monthly {
+.plans__button {
     box-sizing: border-box;
-
-    background: transparent;
     width: 5rem;
     height: 2.375rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    background: transparent;
+    /* background: rgb(81, 47, 235); */
+    border-radius: 6px;
     padding: 8px 10px 8px 10px;
     overflow: hidden;
     z-index: 2;
     align-content: center;
     flex-wrap: nowrap;
     gap: 10;
-    border-radius: 6px;
+    cursor: pointer;
 }
+
+.plans__button:hover {
+    background-color: transparent;
+    color: inherit;
+    cursor: pointer;
+}
+
+.plans__button:focus {
+    outline: none;
+}
+
+
 
 .plans__list {
     display: flex;
