@@ -1,14 +1,16 @@
 import './PlansCard.css'
 import { PiStackSimple } from "react-icons/pi";
 import { FaCheck } from "react-icons/fa6";
+import { MdArrowOutward } from "react-icons/md";
+
 
 
 const PlansCard = () => {
     return (
-        <div className="plans-card__div">
-            <div className="planos-card__header">
+        <div className="plans-card__div outfit-normal">
+            <div className="plans-card__header">
                 <div className="plan-card__title">
-                    <PiStackSimple size={15} className='basic-card__icon'/> 
+                    <PiStackSimple size={15} className='plan-card__icon--basic'/> 
                     <p>Basic</p>
                 </div>
                 
@@ -19,11 +21,19 @@ const PlansCard = () => {
                             /month
                         </span>
                     </h1>
-                    <p>Essential tools and features for starting your journey with ease.</p>
-                    <button className='plans-card__button'>Go with this plan</button>
+                    <p className='plans-card__description'>Essential tools and features for starting your journey with ease.</p>
                 </div>
 
-                <div className='plan-card__benefits'>
+                
+
+                
+            </div>
+
+            <div className='plans-card__button-wrapper'>
+                <button className='plans-card__button'>Go with this plan <MdArrowOutward size={16}/></button>
+            </div>
+
+            <div className='plan-card__benefits'>
                     <div className='plan-card__benefit'>
                         <FaCheck className='plan-card__benefit-icon'/>
                         <p>Basic Workflow Automation</p>
@@ -46,7 +56,6 @@ const PlansCard = () => {
                     </div>
                     
                 </div>
-            </div>
             
 
         </div>
@@ -55,15 +64,3 @@ const PlansCard = () => {
 }
  
 export default PlansCard;
-
-// width: auto;
-// height: auto;
-// white-space: pre;
-// font-weight: 500;
-// font-style: normal;
-// font-family: "Outfit", "Outfit Placeholder", sans-serif;
-// color: var(--Primary_Text, #ffffff);
-// font-size: 35px;
-// letter-spacing: -0.02em;
-// line-height: 1.2;
-// position: absolute;
