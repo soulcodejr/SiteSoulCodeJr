@@ -1,0 +1,43 @@
+{
+    "plans": [
+      {
+        "name": "Basic",
+        "price": "$480/month",
+        "description": "Essential tools and features for starting your journey with ease.",
+        "buttonText": "Go with this plan",
+        "benefits": [
+          "Basic workflow automation",
+          "Basic chatbot development",
+          "60 content requests",
+          "E-mail support",
+          "1 consultation a month"
+        ]
+      },
+      {
+        "name": "Professional",
+        "price": "$960/month",
+        "description": "Advanced capabilities designed to meet growing business needs.",
+        "buttonText": "Go with this plan",
+        "benefits": [
+          "Advance workflow automation",
+          "Advance chatbot development",
+          "150 content requests",
+          "E-mail support",
+          "2 consultations a month"
+        ]
+      },
+      {
+        "name": "Enterprises",
+        "price": "Custom",
+        "description": "Comprehensive solutions tailored for large-scale business success.",
+        "buttonText": "Schedule a call",
+        "benefits": [
+          "Custom workflow automation",
+          "Custom chatbot development",
+          "Unlimited content requests",
+          "24hr priority support",
+          "Unlimited consultations a month"
+        ]
+      }
+    ]
+  }

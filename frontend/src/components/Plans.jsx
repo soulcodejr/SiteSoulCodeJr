@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './Plans.css'
 import PlansCard from './PlansCard';
+import PlansData from '../data/PlansData.json'
 
 
 const Plans = () => {
@@ -39,9 +40,9 @@ const Plans = () => {
             <h1 className='plans__title outfit-bold'>Planos de assinatura</h1>
             <h3 className='plans__subtitle outfit-normal'>Preços</h3>
             <div className="plans__list beam">
-                <PlansCard />
-                <PlansCard />
-                <PlansCard />
+                {PlansData.plans.map((plan, index) => (
+                    <PlansCard key={index} plan={plan} />
+                ))}
                 
             </div>
         </div>

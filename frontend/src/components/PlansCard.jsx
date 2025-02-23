@@ -5,23 +5,24 @@ import { MdArrowOutward } from "react-icons/md";
 
 
 
-const PlansCard = () => {
+const PlansCard = ( { plan }) => {
+    
     return (
         <div className="plans-card__div outfit-normal">
             <div className="plans-card__header">
                 <div className="plan-card__title">
                     <PiStackSimple size={15} className='plan-card__icon--basic'/> 
-                    <p>Basic</p>
+                    <p>{plan.name}</p>
                 </div>
                 
                 <div className='plans-card__prices'>
                     <h1 className='plans-card__price'>
-                        $480 
+                        {plan.price} 
                         <span className='plans-card__price-period'>
-                            /month
+                            {plan.price === 'Custom' ? '' : '/month'}
                         </span>
                     </h1>
-                    <p className='plans-card__description'>Essential tools and features for starting your journey with ease.</p>
+                    <p className='plans-card__description'>{plan.description}</p>
                 </div>
 
                 
@@ -34,26 +35,14 @@ const PlansCard = () => {
             </div>
 
             <div className='plan-card__benefits'>
-                    <div className='plan-card__benefit'>
+                {plan.benefits.map((benefit, index) => (
+                    <div key={index} className='plan-card__benefit'>
                         <FaCheck className='plan-card__benefit-icon'/>
-                        <p>Basic Workflow Automation</p>
+                        <p>{benefit}</p>
                     </div>
-                    <div className='plan-card__benefit'>
-                        <FaCheck className='plan-card__benefit-icon'/>
-                        <p>Basic Workflow Automation</p>
-                    </div>
-                    <div className='plan-card__benefit'>
-                        <FaCheck className='plan-card__benefit-icon'/>
-                        <p>Basic Workflow Automation</p>
-                    </div>
-                    <div className='plan-card__benefit'>
-                        <FaCheck className='plan-card__benefit-icon'/>
-                        <p>Basic Workflow Automation</p>
-                    </div>
-                    <div className='plan-card__benefit'>
-                        <FaCheck className='plan-card__benefit-icon'/>
-                        <p>Basic Workflow Automation</p>
-                    </div>
+
+                ))}
+      
                     
                 </div>
             
