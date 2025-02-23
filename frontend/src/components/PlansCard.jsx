@@ -31,7 +31,7 @@ const PlansCard = ( { plan }) => {
             </div>
 
             <div className='plans-card__button-wrapper'>
-                <button className='plans-card__button'>Go with this plan <MdArrowOutward size={16}/></button>
+                <button className='plans-card__button'>{plan.buttonText} <MdArrowOutward size={16}/></button>
             </div>
 
             <div className='plan-card__benefits'>

@@ -112,11 +112,10 @@
 }
 
 .plan-card__benefit-icon {
-    background-color: rgba(255, 255, 255, 20%); /* Cor de fundo */
-    color: white; /* Cor do ícone */
-    border-radius: 8px; /* Faz o fundo ficar circular */
-    padding: 0.3rem; /* Espaçamento interno para o ícone */
-    display: flex; /* Garante que o ícone seja centralizado no fundo */
+    background-color: rgba(255, 255, 255, 20%);
+    border-radius: 8px;
+    padding: 0.3rem;
+    display: flex;
     align-items: center;
     justify-content: center;
 }

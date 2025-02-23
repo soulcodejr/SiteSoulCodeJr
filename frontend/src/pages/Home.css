@@ -6,20 +6,3 @@
   justify-content: space-between;
   align-items: center;
 }
-
-/* box-sizing: border-box;
-width: min-content;
-height: min-content;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-padding: 30px;
-background: linear-gradient(149deg, rgba(81, 47, 235, 0.15) 0%, rgba(255, 255, 255, 0.06) 28.999999999999996%, rgba(255, 255, 255, 0.06) 74%, rgba(81, 47, 235, 0.15) 100%);
-overflow: hidden;
-align-content: center;
-flex-wrap: nowrap;
-gap: 35;
-position: absolute;
-border-radius: 30px;
-border: 1px solid rgba(255, 255, 255, 0.1); */
