@@ -35,6 +35,12 @@
     line-height: 1.2;
 }
 
+.plan-card__icon--basic {
+    background: rgba(255, 255, 255, 20%);
+    padding: 4px;
+    border-radius: 8px;
+}
+
 
 
 .plans-card__prices {
