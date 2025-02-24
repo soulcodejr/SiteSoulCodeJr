@@ -104,12 +104,10 @@
         grid-template-columns: repeat(2, 1fr); 
     }
 
-    
-
-
     .plans__list > :nth-child(3) {
         
         grid-column: span 2;
+        justify-self: stretch;
         
     }
 }
