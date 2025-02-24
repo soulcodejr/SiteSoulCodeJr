@@ -15,11 +15,11 @@ const Plans = () => {
     const getAdjustedPlans = () => {
         return PlansData.plans.map((plan) => {
             if (planType === 'annual' && plan.price !== 'Custom') {
-                const monthlyPrice = parseFloat(plan.price.replace('$', '').replace('/month', ''));
+                const monthlyPrice = plan.price;
                 const annualPrice = (monthlyPrice * 0.8);
                 return {
                     ...plan,
-                    price: `$${annualPrice}`,
+                    price: `${annualPrice}`,
                 };
             }
             return plan; 

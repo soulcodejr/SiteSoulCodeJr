@@ -16,7 +16,7 @@ const PlansCard = ( { plan }) => {
                 
                 <div className='plans-card__prices'>
                     <h1 className='plans-card__price'>
-                        {plan.price} 
+                        ${plan.price} 
                         <span className='plans-card__price-period'>
                             {plan.price === 'Custom' ? '' : '/month'}
                         </span>
