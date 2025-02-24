@@ -1,6 +1,6 @@
 import { useState } from "react";
 import './CardDuvidas.css'
-import { MdOutlineKeyboardArrowUp, MdOutlineKeyboardArrowDown } from "react-icons/md";
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
 
 const CardDuvidas = ({ pergunta, resposta }) => {
@@ -8,24 +8,21 @@ const CardDuvidas = ({ pergunta, resposta }) => {
 
     
     return (
-        <div className='cardDuvidas-container beam' onClick={() => setIsOpen(!isOpen)}>
-            <div className="content">
-                <div className='duvidas-pergunta'>{pergunta}</div>
-                {isOpen ? (
-                    <div className={`duvidas-icon-div ${isOpen ? 'open' : ''}`}>
-                        <MdOutlineKeyboardArrowUp className="duvidas-icon" size={22} />
-                    </div>
-                ) : (
-                    <div className={`duvidas-icon-div ${isOpen ? 'open' : ''}`}>
+        <div className='card-duvidas__container' onClick={() => setIsOpen(!isOpen)}>
+            <div className="card-duvidas__content">
+                <div className='card-duvidas__pergunta'>
+                    {pergunta}
+                    <div className={`card-duvidas__icon-div ${isOpen ? 'open' : ''}`}>
                         <MdOutlineKeyboardArrowDown className="duvidas-icon" size={22} />
                     </div>
-                )}
-            </div>
-                
-                <div className={`duvidas-resposta ${isOpen ? 'open' : ''}`}>
-                    <p>{resposta}</p>
-                    
                 </div>
+                <div className={`card-duvidas__resposta ${isOpen ? 'open' : ''} outfit-normal`}>
+                    <p>{resposta}</p>
+                </div>
+                     
+            </div>
+            
+                
         </div>
     );
 }
