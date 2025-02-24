@@ -3,6 +3,8 @@ package com.soulCodeJr.backEndSite.services;
 import com.soulCodeJr.backEndSite.entities.Candidate;
 import com.soulCodeJr.backEndSite.repositories.CandidateRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,8 +14,8 @@ public class CandidateService {
     @Autowired
     private CandidateRepository candidateRepository;
 
-    public List<Candidate> findAll() {
-        return candidateRepository.findAll();
+    public Page<Candidate> findAll(Pageable pageable) {
+        return candidateRepository.findAll(pageable);
     }
 
     public Candidate findById(Long id) {
