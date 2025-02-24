@@ -88,9 +88,15 @@
 
 }
 
-.plans__list  {
-    border: 10px solid red;
+/* .plans__list > :nth-child(1) {
+    grid-column: 1 / 2;
+    justify-self: start;
 }
+
+.plans__list > :nth-child(2) {
+    grid-column: 2 / 3;
+    justify-self: end;
+} */
 
 
 
