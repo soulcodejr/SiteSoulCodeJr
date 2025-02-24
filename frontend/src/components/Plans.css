@@ -52,7 +52,6 @@
     justify-content: center;
     align-items: center;
     background: transparent;
-    /* background: rgb(81, 47, 235); */
     border-radius: 6px;
     padding: 8px 10px 8px 10px;
     overflow: hidden;
@@ -87,17 +86,6 @@
     margin: 0 auto;
 
 }
-
-/* .plans__list > :nth-child(1) {
-    grid-column: 1 / 2;
-    justify-self: start;
-}
-
-.plans__list > :nth-child(2) {
-    grid-column: 2 / 3;
-    justify-self: end;
-} */
-
 
 
 /*-------------------------------*/
