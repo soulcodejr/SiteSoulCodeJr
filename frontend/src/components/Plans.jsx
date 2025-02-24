@@ -12,6 +12,20 @@ const Plans = () => {
         setPlanType(type);
     }
 
+    const getAdjustedPlans = () => {
+        return PlansData.plans.map((plan) => {
+            if (planType === 'annual' && plan.price !== 'Custom') {
+                const monthlyPrice = parseFloat(plan.price.replace('$', '').replace('/month', ''));
+                const annualPrice = (monthlyPrice * 0.8);
+                return {
+                    ...plan,
+                    price: `$${annualPrice}`,
+                };
+            }
+            return plan; 
+        });
+    };
+
     return ( 
         <div className='plans__container outfit-normal'>
             <div className='plans__button-group'>
@@ -40,7 +54,7 @@ const Plans = () => {
             <h1 className='plans__title outfit-bold'>Planos de assinatura</h1>
             <h3 className='plans__subtitle outfit-normal'>Preços</h3>
             <div className="plans__list beam">
-                {PlansData.plans.map((plan, index) => (
+                {getAdjustedPlans().map((plan, index) => (
                     <PlansCard key={index} plan={plan} />
                 ))}
                 
