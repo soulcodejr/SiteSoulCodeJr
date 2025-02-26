@@ -1,0 +1,124 @@
+.plans-card__div {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    background: linear-gradient(149deg, rgba(81, 47, 235, 0.15) 0%, rgba(255, 255, 255, 0.06) 29%, rgba(255, 255, 255, 0.06) 74%, rgba(81, 47, 235, 0.15) 100%);
+    flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 10%);
+    border-radius: 30px;
+    padding: 30px;
+    gap: 35px;
+    box-sizing: border-box;
+}
+
+
+
+.plans-card__div p {
+    margin: 0;
+
+}
+
+.plans-card__header {
+    display: flex;
+    flex-direction: column;
+    
+    align-items: flex-start;
+    justify-content: center;
+
+    gap: 15px;
+}
+
+.plan-card__title {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+    gap: 10px;
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+.plan-card__icon--basic {
+    background: rgba(255, 255, 255, 20%);
+    padding: 4px;
+    border-radius: 8px;
+}
+
+
+
+.plans-card__prices {
+    display: flex;
+    flex-direction: column;  
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.plans-card__price {  
+    align-self: flex-start;
+    font-weight: 500;
+    font-style: normal;
+    font-family: "Outfit", "Outfit Placeholder", sans-serif;
+    
+    font-size: 35px;
+    letter-spacing: -0.02em;
+    line-height: 1.2; 
+}
+
+.plans-card__price {
+    margin: 0px;
+
+}
+
+.plans-card__price-period {
+    font-size: 16px;
+}
+
+.plans-card__description {
+    margin: 0;
+    align-items: flex-start;
+    text-align: left;
+    color: rgba(255, 255, 255, 70%);
+}
+
+.plans-card__button {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    background: rgb(81, 47, 235);
+    width: 100%;
+    font-size: 15px;
+    gap: 5px;
+    align-items: center;
+}
+
+.plan-card__benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    align-items: flex-start;
+    padding: 0;
+}
+
+.plan-card__benefit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0px;
+}
+
+.plan-card__benefit p {
+    margin: 0;
+    font-size: 16px; 
+
+    line-height: 1.2; 
+}
+
+.plan-card__benefit-icon {
+    background-color: rgba(255, 255, 255, 20%);
+    border-radius: 8px;
+    padding: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
