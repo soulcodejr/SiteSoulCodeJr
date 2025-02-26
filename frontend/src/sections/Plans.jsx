@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './Plans.css'
-import PlansCard from './PlansCard';
+import PlansCard from '../components/PlansCard';
 import PlansData from '../data/PlansData.json'
 
 
@@ -22,27 +22,28 @@ const Plans = () => {
                     price: `${annualPrice}`,
                 };
             }
-            return plan; 
+            return plan;
         });
     };
 
-    return ( 
+    return (
         <div className='plans__container outfit-normal'>
+            <button className='section-button' >Planos</button>
             <div className='plans__button-group'>
-                <div 
+                <div
                     className='plans__button-background'
                     style={{
                         left: planType === 'annual' ? '25%' : '75%',
                         transform: 'translateX(-50%)',
-                    }} 
+                    }}
                 />
-                <button 
+                <button
                     className={`plans__button ${planType === 'annual' ? 'plans__button--active' : ''}`}
                     onClick={() => handlePlanChange('annual')}
                 >
                     Anually
                 </button>
-                <button 
+                <button
                     className={`plans__button ${planType === 'monthly' ? 'plans__button--active' : ''}`}
                     onClick={() => handlePlanChange('monthly')}
                 >
@@ -57,10 +58,10 @@ const Plans = () => {
                 {getAdjustedPlans().map((plan, index) => (
                     <PlansCard key={index} plan={plan} />
                 ))}
-                
+
             </div>
         </div>
     );
 }
- 
+
 export default Plans;

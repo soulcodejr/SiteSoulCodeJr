@@ -5,7 +5,7 @@
 - Colocar novas configurações, migrations, estilos...
 
 ## A fazer
-- [] Caso o PR tenha sido criado como draft ou ainda precisar de alguma melhoria,
+- [ ] Caso o PR tenha sido criado como draft ou ainda precisar de alguma melhoria,
 
 ## Imagens & Vídeos
 - Principalmente para pull requests associados a front-end;
