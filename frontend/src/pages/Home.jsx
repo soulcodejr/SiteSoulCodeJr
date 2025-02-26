@@ -1,6 +1,7 @@
-import Duvidas from "../components/Duvidas";
-import Plans from "../components/Plans"
-//import Contrate from "../sections/Contrate";
+import Duvidas from "../sections/Duvidas";
+import Plans from "../sections/Plans";
+import Contrate from "../sections/Contrate";
+import "./Home.css";
 
 import "./Home.css";
 
@@ -9,7 +10,7 @@ export default function Home() {
     <div className="home">
       <Plans />
       <Duvidas />
-
+      <Contrate />
     </div>
   );
 }
