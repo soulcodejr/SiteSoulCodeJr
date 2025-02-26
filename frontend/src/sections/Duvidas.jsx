@@ -1,12 +1,12 @@
 
-import CardDuvidas from './CardDuvidas';
+import CardDuvidas from '../components/CardDuvidas';
 
 import perguntas from '../data/FAQ.json';
 
 import './Duvidas.css';
 
 const Duvidas = () => {
-    return ( 
+    return (
         <div className='duvidas-container'>
             <h1 className='outfit-bold'>Dúvidas gerais</h1>
             <h3 className='outfit-normal'>Informações gerais</h3>
@@ -18,10 +18,10 @@ const Duvidas = () => {
                         resposta={item.resposta}
                     />
                 ))}
-               
+
             </div>
         </div>
     );
 }
- 
+
 export default Duvidas;
