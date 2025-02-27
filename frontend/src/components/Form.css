@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   gap: 6px;
+  align-items: center;
 }
 
 label{
@@ -24,7 +25,7 @@ label p {
 
 label input,
 label textarea{
-  width: 90%;
+  width: 100%;
   background-color: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
@@ -44,9 +45,9 @@ label textarea{
 }
 
 button#form-button.primary-btn{
-  width: 90%;
+  width: 80%;
   justify-content: center;
-  margin: 8px auto 0;
+  margin-top: 8px;
 }
 
 @media (max-width: 1000px){
