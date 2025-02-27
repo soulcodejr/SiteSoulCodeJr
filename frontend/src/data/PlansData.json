@@ -2,7 +2,7 @@
     "plans": [
       {
         "name": "Basic",
-        "price": "$480/month",
+        "price": "600",
         "description": "Essential tools and features for starting your journey with ease.",
         "buttonText": "Go with this plan",
         "benefits": [
@@ -15,7 +15,7 @@
       },
       {
         "name": "Professional",
-        "price": "$960/month",
+        "price": "1200",
         "description": "Advanced capabilities designed to meet growing business needs.",
         "buttonText": "Go with this plan",
         "benefits": [

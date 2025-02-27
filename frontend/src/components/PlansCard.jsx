@@ -4,7 +4,6 @@ import { FaCheck } from "react-icons/fa6";
 import { MdArrowOutward } from "react-icons/md";
 
 
-
 const PlansCard = ( { plan }) => {
     
     return (
@@ -17,17 +16,14 @@ const PlansCard = ( { plan }) => {
                 
                 <div className='plans-card__prices'>
                     <h1 className='plans-card__price'>
-                        {plan.price} 
+                        ${plan.price} 
                         <span className='plans-card__price-period'>
                             {plan.price === 'Custom' ? '' : '/month'}
                         </span>
                     </h1>
                     <p className='plans-card__description'>{plan.description}</p>
                 </div>
-
-                
-
-                
+               
             </div>
 
             <div className='plans-card__button-wrapper'>
@@ -41,14 +37,9 @@ const PlansCard = ( { plan }) => {
                         <p>{benefit}</p>
                     </div>
 
-                ))}
-      
-                    
+                ))}                
                 </div>
-            
-
         </div>
-
     );
 }
  
