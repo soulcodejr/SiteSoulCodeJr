@@ -5,25 +5,25 @@ import { MdArrowOutward } from "react-icons/md";
 
 
 const PlansCard = ( { plan }) => {
-    
+
     return (
         <div className="plans-card__div outfit-normal">
             <div className="plans-card__header">
                 <div className="plan-card__title">
-                    <PiStackSimple size={15} className='plan-card__icon--basic'/> 
+                    <PiStackSimple size={15} className='plan-card__icon--basic'/>
                     <p>{plan.name}</p>
                 </div>
-                
+
                 <div className='plans-card__prices'>
                     <h1 className='plans-card__price'>
-                        ${plan.price} 
+                    {isNaN(parseFloat(plan.price)) ? plan.price : `$${plan.price}`}
                         <span className='plans-card__price-period'>
                             {plan.price === 'Custom' ? '' : '/month'}
                         </span>
                     </h1>
                     <p className='plans-card__description'>{plan.description}</p>
                 </div>
-               
+
             </div>
 
             <div className='plans-card__button-wrapper'>
@@ -37,10 +37,10 @@ const PlansCard = ( { plan }) => {
                         <p>{benefit}</p>
                     </div>
 
-                ))}                
+                ))}
                 </div>
         </div>
     );
 }
- 
+
 export default PlansCard;
