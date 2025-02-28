@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(value = "/candidates")
-public class CandidateResource {
+public class CandidateController {
     @Autowired
     private CandidateService candidateService;
 
