@@ -1,0 +1,19 @@
+.outer-container-services{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  height: auto;
+}
+
+.services-cards-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 6rem 0;
+  gap: 20px;
+}
