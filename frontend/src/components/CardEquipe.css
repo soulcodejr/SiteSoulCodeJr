@@ -7,6 +7,8 @@
     margin-top: 20px;
 }
 
+
+
 .card {
     box-sizing: border-box;
     background-color: #ffffff;
@@ -15,6 +17,7 @@
     margin: 10px;
     overflow: hidden;
 }   
+
 
 .card__header {
     padding: 15px;
@@ -39,3 +42,4 @@
     max-width: 100%;
     object-fit: cover;
 }
+

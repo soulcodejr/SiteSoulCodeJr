@@ -1,0 +1,59 @@
+
+.duvidas-container {
+
+    margin: 10rem auto;
+    padding: 2.5rem;
+    transition: 0.6s ease-out, transform 0.6s ease-out;
+}
+
+
+.duvidas-container,
+.duvidas-container * {
+    font-family: "Outfit", sans-serif;
+}
+
+.duvidas-resposta p {
+    background-color: transparent;
+}
+
+.duvidas-container h1 {
+    margin-bottom: 10px;
+}
+
+.duvidas-container h3 {
+    color: rgba(255,255,255,80%);
+    margin-bottom: 60px;
+}
+
+
+.duvidas-lista {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    max-width: 60rem;
+
+    margin: 0 auto;
+}
+
+.duvidas-lista.beam::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    background: rgba(81, 47, 235, 0.9);
+    filter: blur(65px);
+    transform: translate(-50%, -50%) rotate(-10deg);
+    border-radius: 100%;
+    z-index: 0;
+}
+
+
+
+@media (max-width: 1000px){
+    .duvidas-lista{
+        max-width: 90%;
+    }
+}

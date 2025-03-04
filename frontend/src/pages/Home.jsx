@@ -1,11 +1,20 @@
-import styled from "styled-components"
+
+import Duvidas from "../sections/Duvidas";
+import Plans from "../sections/Plans";
+import Contrate from "../sections/Contrate";
+import Services from "../sections/Services";
+import "./Home.css";
+
+
+import "./Home.css";
 
 export default function Home() {
-    return (
-        <Container><h1>HOME PAGE</h1></Container>
-    )
+  return (
+    <div className="home">
+      <Services />
+      <Plans />
+      <Duvidas />
+      <Contrate />
+    </div>
+  );
 }
-
-const Container = styled.div`
-    
-`
