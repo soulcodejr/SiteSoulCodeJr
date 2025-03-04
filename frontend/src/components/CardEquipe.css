@@ -5,8 +5,7 @@
     justify-content:space-evenly;
     gap: 25px;
     margin-top: 20px;
-  }
-
+}
 
 .card {
     box-sizing: border-box;
@@ -15,7 +14,7 @@
     width: 300px;
     margin: 10px;
     overflow: hidden;
-}
+}   
 
 .card__header {
     padding: 15px;
@@ -39,4 +38,9 @@
     width: 100%;
     max-width: 100%;
     object-fit: cover;
+    object-position: top;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
+
+
