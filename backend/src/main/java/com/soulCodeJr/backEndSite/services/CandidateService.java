@@ -2,12 +2,15 @@ package com.soulCodeJr.backEndSite.services;
 
 import com.soulCodeJr.backEndSite.dto.CandidateDTO;
 import com.soulCodeJr.backEndSite.entities.Candidate;
-import com.soulCodeJr.backEndSite.exception.UserIndicatorNotFoundException;
+import com.soulCodeJr.backEndSite.exception.DatabaseException;
+import com.soulCodeJr.backEndSite.exception.ResourceNotFoundException;
 import com.soulCodeJr.backEndSite.repositories.CandidateRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
@@ -23,20 +26,24 @@ public class CandidateService {
     }
 
     public CandidateDTO addNewCandidate(CandidateDTO dto) {
-
         Candidate candidate = new Candidate();
         dtoToEntity(dto,candidate);
         candidate = candidateRepository.save(candidate);
         return new CandidateDTO(candidate);
-
     }
 
-    public void deleteCandidateById(Long id)
-    {
-        if(!candidateRepository.existsById(id)) {
-            throw new UserIndicatorNotFoundException("ID não encontrada");
+    @Transactional(propagation = Propagation.SUPPORTS)
+    public void deleteCandidateById(Long id) {
+
+        if (!candidateRepository.existsById(id)) {
+            throw new ResourceNotFoundException("Recurso não encontrado");
         }
-        candidateRepository.deleteById(id);
+        try {
+            candidateRepository.deleteById(id);
+        }
+        catch (DataIntegrityViolationException e) {
+            throw new DatabaseException("Falha de integridade referencial");
+        }
     }
 
     public void dtoToEntity(CandidateDTO dto, Candidate entity){

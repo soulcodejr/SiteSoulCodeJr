@@ -2,8 +2,9 @@ package com.soulCodeJr.backEndSite.controllers.handlers;
 
 import com.soulCodeJr.backEndSite.dto.CustomErrorDTO;
 import com.soulCodeJr.backEndSite.dto.ValidationErrorDTO;
-import com.soulCodeJr.backEndSite.exception.ErrorMessage;
+import com.soulCodeJr.backEndSite.exception.DatabaseException;
 import com.soulCodeJr.backEndSite.exception.MethodArgumentNotValidException;
+import com.soulCodeJr.backEndSite.exception.ResourceNotFoundException;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,10 +16,19 @@ import java.time.Instant;
 
 @ControllerAdvice
 public class ControllerExceptionHandler {
-    @ExceptionHandler(RuntimeException.class)
-    public ResponseEntity<ErrorMessage> handleRuntimeException(RuntimeException e) {
-        ErrorMessage error = new ErrorMessage(e.getMessage());
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(error);
+
+    @ExceptionHandler(ResourceNotFoundException.class)
+    public ResponseEntity<CustomErrorDTO> resourceNotFound(ResourceNotFoundException e, HttpServletRequest request) {
+        HttpStatus status = HttpStatus.NOT_FOUND;
+        CustomErrorDTO err = new CustomErrorDTO(Instant.now(), status.value(), e.getMessage(), request.getRequestURI());
+        return ResponseEntity.status(status).body(err);
+    }
+
+    @ExceptionHandler(DatabaseException.class)
+    public ResponseEntity<CustomErrorDTO> database(DatabaseException e, HttpServletRequest request) {
+        HttpStatus status = HttpStatus.BAD_REQUEST;
+        CustomErrorDTO err = new CustomErrorDTO(Instant.now(), status.value(), e.getMessage(), request.getRequestURI());
+        return ResponseEntity.status(status).body(err);
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)

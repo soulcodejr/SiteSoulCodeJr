@@ -15,6 +15,7 @@ import java.net.URI;
 @RestController
 @RequestMapping(value = "/candidates")
 public class CandidateController {
+
     @Autowired
     private CandidateService candidateService;
 
@@ -24,20 +25,21 @@ public class CandidateController {
         return ResponseEntity.ok(dto);
     }
 
-    @PostMapping
+    @PostMapping(value = "/insert")
     public ResponseEntity<CandidateDTO> addNewCandidate(@RequestBody CandidateDTO candidate) {
 
         candidate = candidateService.addNewCandidate(candidate);
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
                 .buildAndExpand(candidate.getId()).toUri();
         return ResponseEntity.created(uri).body(candidate);
+
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Candidate> deleteCandidateById(@PathVariable Long id)
+    public ResponseEntity<Void> deleteCandidateById(@PathVariable Long id)
     {
         candidateService.deleteCandidateById(id);
-        return ResponseEntity.noContent().build(); // 204 Success
+        return ResponseEntity.noContent().build();
     }
 
 }

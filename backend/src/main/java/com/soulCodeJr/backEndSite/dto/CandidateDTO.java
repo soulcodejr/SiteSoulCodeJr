@@ -13,51 +13,30 @@ public class CandidateDTO {
     public CandidateDTO(){}
 
     public CandidateDTO(Candidate candidate){
-
-        this.name = candidate.getName();
-        this.email = candidate.getEmail();
-        this.registration = candidate.getRegistration();
-        this.sector = candidate.getSector();
-
+        id = candidate.getId();
+        name = candidate.getName();
+        email = candidate.getEmail();
+        registration = candidate.getRegistration();
+        sector = candidate.getSector();
     }
 
     public Long getId() {
         return id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getRegistration() {
         return registration;
     }
 
-    public void setRegistration(String registration) {
-        this.registration = registration;
-    }
-
     public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
     public String getSector() {
         return sector;
-    }
-
-    public void setSector(String sector) {
-        this.sector = sector;
     }
 }
