@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(value = "/candidates")
-public class CandidateResource {
+public class CandidateController {
     @Autowired
     private CandidateService candidateService;
 
@@ -29,8 +29,15 @@ public class CandidateResource {
         return ResponseEntity.ok().body(candidate);
     }
 
-    @PostMapping("/candidates")
+    @PostMapping
     public Candidate addNewCandidate(@RequestBody Candidate candidate) {
         return candidateService.addNewCandidate(candidate);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Candidate> deleteCandidateById(@PathVariable Long id)
+    {
+        candidateService.deleteCandidateById(id);
+        return ResponseEntity.noContent().build(); // 204 Success
     }
 }
