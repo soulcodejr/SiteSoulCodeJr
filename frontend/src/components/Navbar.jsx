@@ -25,7 +25,7 @@ const Navbar = () => {
       </div>
       <div className="center-navs-container">
         <nav>
-          <a href="">Equipe</a>
+          <a href="/SiteSoulCodeJr/nossa-equipe">Equipe</a>
         </nav>
         <nav>
           <a href="">Serviços</a>
