@@ -16,7 +16,7 @@
 }
 
 .projects-header__div {
-    margin-top: 25px;
+    margin: 25px 0px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -29,7 +29,7 @@
     grid-template-columns: repeat(3, 1fr);
     justify-items: center ;
     gap: 20px;
-    padding: 20px;
+    padding: 20px 30px;
     max-width: 1200px;
     margin: 0 auto;
     overflow: hidden;
