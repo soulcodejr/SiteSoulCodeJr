@@ -1,0 +1,10 @@
+.project-card__div {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(149deg, rgba(81, 47, 235, 0.15) 0%, rgba(255, 255, 255, 0.06) 29%, rgba(255, 255, 255, 0.06) 74%, rgba(81, 47, 235, 0.15) 100%);
+    padding: 20px 30px;
+    border-radius: 30px;
+    box-sizing: border-box;
+
+
+}

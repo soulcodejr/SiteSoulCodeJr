@@ -1,4 +1,4 @@
-import CardProjects from '../components/CardProjects';
+import ProjectsCard from '../components/ProjectsCard';
 import './Projetos.css'
 
 const Projetos = () => {
@@ -9,8 +9,10 @@ const Projetos = () => {
                 <h2>Um pouco do nosso trabalho</h2>
                 <h3>Projetos concluídos pela SCjr</h3>
             </div>
-            <div>
-                <CardProjects />    
+            <div className='projects-card__div'>
+                <ProjectsCard />    
+                <ProjectsCard />    
+                <ProjectsCard />    
             </div>
         </div>
     );
