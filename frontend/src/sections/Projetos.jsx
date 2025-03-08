@@ -1,6 +1,8 @@
 import ProjectsCard from '../components/ProjectsCard';
 import './Projetos.css'
 
+import data from '../data/Projects.json'
+
 const Projetos = () => {
     return (
         <div className='projects__div outfit-normal'>
@@ -10,9 +12,11 @@ const Projetos = () => {
                 <h3>Projetos concluídos pela SCjr</h3>
             </div>
             <div className='projects-card__div'>
-                <ProjectsCard />    
-                <ProjectsCard />    
-                <ProjectsCard />    
+                {data.projects.map((project, index) => (
+                    <ProjectsCard 
+                        key={index} 
+                        project={project} />
+                ))} 
             </div>
         </div>
     );
