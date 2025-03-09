@@ -1,17 +1,17 @@
 import ProjectsCard from '../components/ProjectsCard'
 import './Feedback.css'
 import data from '../data/Projects.json'
+import HeaderSection from '../components/HeaderSection'
 
 const Feedback = () => {
     return ( 
-        <div>
-            <div className='projects__div outfit-normal'>
-                <button className="section-button">Clientes</button>
-                <div className='projects-header__div'>
-                    <h2>Clientes verdadeiramentes satisfeitos</h2>
-                    <h3>Descubra como colaboramos com a inovação na sua empresa</h3>
-                </div>
-                <div className='projects-card__div'>
+        <div>         
+            <HeaderSection 
+                title={"Clientes verdadeiramentes satisfeitos"}
+                subtitle={"Descubra como colaboramos com a inovação na sua empresa"}
+                button_title={"Clientes"}
+            />
+                <div className='card__container'>
                     {data.feedbacks.map((feedback, index) => (
                         <ProjectsCard 
                             key={index} 
@@ -22,7 +22,7 @@ const Feedback = () => {
                         />
                     ))} 
                 </div>
-            </div>
+
         </div>
     );
 }

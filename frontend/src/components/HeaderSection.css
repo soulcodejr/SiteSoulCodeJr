@@ -1,0 +1,45 @@
+.header__section {
+    width: 100vw;
+    margin-top: 200px;
+    overflow: hidden;
+}
+
+.header-text__div > h2 {
+    font-size: 50px;
+    margin: 0px;
+}
+
+.header-text__div > h3 {
+    font-weight: 500;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.5px;
+}
+
+.header-text__div {
+    margin: 25px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+@media (max-width: 768px) {
+
+    
+    .header__div h2 {
+        font-size: 36px;
+    }
+
+    .header__div h3 {
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .header__div h2 {
+        font-size: 26px;
+    }
+}

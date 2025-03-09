@@ -3,6 +3,7 @@ import './Projetos.css'
 import { TrendDown, Check, TrendUp } from '@phosphor-icons/react';
 
 import data from '../data/Projects.json'
+import HeaderSection from '../components/HeaderSection';
 
 const Projetos = () => {
 
@@ -16,23 +17,25 @@ const Projetos = () => {
     }; 
 
     return (
-        <div className='projects__div outfit-normal'>
-            <button className="section-button">Projetos</button>
-            <div className='projects-header__div'>
-                <h2>Um pouco do nosso trabalho</h2>
-                <h3>Projetos concluídos pela SCjr</h3>
+
+            <div >           
+                <HeaderSection 
+                    title={"Um pouco do nosso trabalho"}
+                    subtitle={"Projetos concluídos pela SCjr"}
+                    button_title={"Projetos"}
+                />
+
+                <div className='card__container three-cards'>
+                    {data.projects.map((project, index) => (
+                        <ProjectsCard 
+                            key={index}
+                            icon={getProjectIcon(project.name)} 
+                            title={project.name}
+                            description={project.description}  
+                        />
+                    ))} 
+                </div>
             </div>
-            <div className='projects-card__div three-cards'>
-                {data.projects.map((project, index) => (
-                    <ProjectsCard 
-                        key={index}
-                        icon={getProjectIcon(project.name)} 
-                        title={project.name}
-                        description={project.description}  
-                    />
-                ))} 
-            </div>
-        </div>
     );
 }
  
