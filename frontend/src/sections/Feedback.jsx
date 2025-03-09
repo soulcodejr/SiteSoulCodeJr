@@ -1,5 +1,5 @@
 import ProjectsCard from '../components/ProjectsCard'
-
+import './Feedback.css'
 import data from '../data/Projects.json'
 
 const Feedback = () => {

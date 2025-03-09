@@ -17,40 +17,41 @@
 
     "feedbacks": [
     {
-      "description": "Radison transformed our workflow with incredible AI solutions. Their expertise truly exceeded all expectations",
+      "description": "\"Radison transformed our workflow with incredible AI solutions. Their expertise truly exceeded all expectations\"",
       "client_name": "Dean Watson",
       "client_role": "Managing director: Farmland",
       "profile_picture": "https://picsum.photos/80/80?random=1"
     },
     {
-      "description": "Optimize business processes and streamline operations to significantly minimize costs and maximize overall efficiency.",
+      "description": "\"Thanks to Radison, we've achieved incredible growth by automating tasks and improving accuracy.\"",
       "client_name": "Emily Zhang",
       "client_role": "CEO: Futuresync",
       "profile_picture": "https://picsum.photos/80/80?random=1"
     },
     {
-      "description": "Thanks to Radison, we've achieved incredible growth by automating tasks and improving accuracy.",
+      "description": "\"Thanks to Radison, we've achieved incredible growth by automating tasks and improving accuracy.\"",
       "client_name": "Emily Zhang",
       "client_role": "CEO: Futuresync",
       "profile_picture": "https://picsum.photos/80/80?random=1"
     },
     {
-      "description": "Thanks to Radison, we've achieved incredible growth by automating tasks and improving accuracy.",
+      "description": "\"Thanks to Radison, we've achieved incredible growth by automating tasks and improving accuracy.\"",
       "client_name": "Emily Zhang",
       "client_role": "CEO: Futuresync",
       "profile_picture": "https://picsum.photos/80/80?random=1"
     },
     {
-      "description": "Thanks to Radison, we've achieved incredible growth by automating tasks and improving accuracy.",
+      "description": "\"Thanks to Radison, we've achieved incredible growth by automating tasks and improving accuracy.\"",
       "client_name": "Emily Zhang",
       "client_role": "CEO: Futuresync",
       "profile_picture": "https://picsum.photos/80/80?random=1"
     },
     {
-      "description": "Thanks to Radison, we've achieved incredible growth by automating tasks and improving accuracy.",
+      "description": "\"Thanks to Radison, we've achieved incredible growth by automating tasks and improving accuracy.\"",
       "client_name": "Emily Zhang",
       "client_role": "CEO: Futuresync",
       "profile_picture": "https://picsum.photos/80/80?random=1"
-    } 
+    }
+    
     ]
 }

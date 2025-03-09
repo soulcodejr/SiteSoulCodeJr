@@ -57,7 +57,7 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .projects-card__div > :nth-child(3) {
+    .projects-card__div.three-cards > :nth-child(3) {
         grid-column: span 2;
     }
 }

@@ -22,10 +22,10 @@ const Projetos = () => {
                 <h2>Um pouco do nosso trabalho</h2>
                 <h3>Projetos concluídos pela SCjr</h3>
             </div>
-            <div className='projects-card__div'>
+            <div className='projects-card__div three-cards'>
                 {data.projects.map((project, index) => (
                     <ProjectsCard 
-                        key={index} 
+                        key={index}
                         icon={getProjectIcon(project.name)} 
                         title={project.name}
                         description={project.description}  
