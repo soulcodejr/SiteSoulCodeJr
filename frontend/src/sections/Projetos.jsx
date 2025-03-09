@@ -1,9 +1,20 @@
 import ProjectsCard from '../components/ProjectsCard';
 import './Projetos.css'
+import { TrendDown, Check, TrendUp } from '@phosphor-icons/react';
 
 import data from '../data/Projects.json'
 
 const Projetos = () => {
+
+    const getProjectIcon = (name) => {
+        const icons = {
+            'Site SCTI2024': <TrendDown size={28} className="project__icon" />,
+            'Site SCjr': <Check size={28} className="project__icon" />,
+            'NaRede': <TrendUp size={28} className="project__icon" />,
+        };
+        return icons[name] || <TrendUp size={28} className="project__icon" />;
+    }; 
+
     return (
         <div className='projects__div outfit-normal'>
             <button className="section-button">Projetos</button>
@@ -15,7 +26,10 @@ const Projetos = () => {
                 {data.projects.map((project, index) => (
                     <ProjectsCard 
                         key={index} 
-                        project={project} />
+                        icon={getProjectIcon(project.name)} 
+                        title={project.name}
+                        description={project.description}  
+                    />
                 ))} 
             </div>
         </div>

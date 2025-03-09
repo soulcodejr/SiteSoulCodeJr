@@ -1,4 +1,4 @@
-.project-card__div {
+.card__div {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -6,7 +6,7 @@
     padding: 20px 30px;
     border-radius: 30px;
     box-sizing: border-box;
-    height: 149px;
+    height: fit-content;
     border: 1px solid rgba(255, 255, 255, 0.1);
     max-width: 355px;
     width: 100%;
@@ -20,19 +20,31 @@
     border-radius: 8px;
 }
 
-.projects__div .project-card__div h3 {
-    font-size: 22px;
+.card-title > h2{
+    font-size: 22px; 
+    line-height: 1.2rem;
+}
+
+.card-description > p {
+    font-size: 16px;
+    color: rgba(255,255,255,0.7);   
+    margin: 0; 
+}
+
+.card-image > img {
+    width: 46px;
+    height: 46px;
+    border-radius: 8px;
 }
 
 .projects__div .project-card__div p {
     font-size: 16px;
-    color: rgba(255,255,255,0.7);   
-    margin: 0; 
+    
 
 }
 
 @media (max-width: 768px) {
-    .project-card__div {
+    .card__div {
         max-width: 100%;
     }
 }
