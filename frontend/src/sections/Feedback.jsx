@@ -6,10 +6,10 @@ const Feedback = () => {
     return ( 
         <div>
             <div className='projects__div outfit-normal'>
-                <button className="section-button">Projetos</button>
+                <button className="section-button">Clientes</button>
                 <div className='projects-header__div'>
-                    <h2>Um pouco do nosso trabalho</h2>
-                    <h3>Projetos concluídos pela SCjr</h3>
+                    <h2>Clientes verdadeiramentes satisfeitos</h2>
+                    <h3>Descubra como colaboramos com a inovação na sua empresa</h3>
                 </div>
                 <div className='projects-card__div'>
                     {data.feedbacks.map((feedback, index) => (
