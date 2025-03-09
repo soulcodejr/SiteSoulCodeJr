@@ -2,7 +2,7 @@ import ProjectsCard from '../components/ProjectsCard'
 import './Feedback.css'
 import data from '../data/Projects.json'
 import HeaderSection from '../components/HeaderSection'
-
+// import './Projetos.css'
 const Feedback = () => {
     return ( 
         <div>         

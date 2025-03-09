@@ -18,7 +18,7 @@ const Projetos = () => {
 
     return (
 
-            <div >           
+            <div className='projects__div three-cards'>           
                 <HeaderSection 
                     title={"Um pouco do nosso trabalho"}
                     subtitle={"Projetos concluídos pela SCjr"}

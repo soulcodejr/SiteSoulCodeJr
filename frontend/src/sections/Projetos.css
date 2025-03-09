@@ -63,7 +63,7 @@
     .card__container {
         grid-template-columns: 1fr;
     }
-    .card__container > :nth-child(3) {
+    .card__container.three-cards > :nth-child(3) {
         grid-column: unset;
     }
 
