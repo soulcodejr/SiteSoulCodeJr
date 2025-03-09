@@ -1,0 +1,57 @@
+{
+    "projects": [
+      {
+        "name": "Site SCTI2024",     
+        "description": "zzzzz"
+      },
+      {
+        "name": "Site SCjr",     
+        "description": "zzzzz"
+      },
+      {
+        "name": "NaRede",     
+        "description": "zzzzz"
+      }
+      
+    ],
+
+    "feedbacks": [
+    {
+      "description": "\"Radison transformed our workflow with incredible AI solutions. Their expertise truly exceeded all expectations\"",
+      "client_name": "Dean Watson",
+      "client_role": "Managing director: Farmland",
+      "profile_picture": "https://fastly.picsum.photos/id/184/80/80.jpg?hmac=ooZmxpBM4YfNkErV5MzmHtwiggEfoJJb11OByVUT0Eg"
+    },
+    {
+      "description": "\"Thanks to Radison, we've achieved incredible growth by automating tasks and improving accuracy.\"",
+      "client_name": "Emily Zhang",
+      "client_role": "CEO: Futuresync",
+      "profile_picture": "https://fastly.picsum.photos/id/184/80/80.jpg?hmac=ooZmxpBM4YfNkErV5MzmHtwiggEfoJJb11OByVUT0Eg"
+    },
+    {
+      "description": "\"Thanks to Radison, we've achieved incredible growth by automating tasks and improving accuracy.\"",
+      "client_name": "Emily Zhang",
+      "client_role": "CEO: Futuresync",
+      "profile_picture": "https://fastly.picsum.photos/id/184/80/80.jpg?hmac=ooZmxpBM4YfNkErV5MzmHtwiggEfoJJb11OByVUT0Eg"
+    },
+    {
+      "description": "\"Thanks to Radison, we've achieved incredible growth by automating tasks and improving accuracy.\"",
+      "client_name": "Emily Zhang",
+      "client_role": "CEO: Futuresync",
+      "profile_picture": "https://fastly.picsum.photos/id/184/80/80.jpg?hmac=ooZmxpBM4YfNkErV5MzmHtwiggEfoJJb11OByVUT0Eg"
+    },
+    {
+      "description": "\"Thanks to Radison, we've achieved incredible growth by automating tasks and improving accuracy.\"",
+      "client_name": "Emily Zhang",
+      "client_role": "CEO: Futuresync",
+      "profile_picture": "https://fastly.picsum.photos/id/184/80/80.jpg?hmac=ooZmxpBM4YfNkErV5MzmHtwiggEfoJJb11OByVUT0Eg"
+    },
+    {
+      "description": "\"Thanks to Radison, we've achieved incredible growth by automating tasks and improving accuracy.\"",
+      "client_name": "Emily Zhang",
+      "client_role": "CEO: Futuresync",
+      "profile_picture": "https://fastly.picsum.photos/id/184/80/80.jpg?hmac=ooZmxpBM4YfNkErV5MzmHtwiggEfoJJb11OByVUT0Eg"
+    }
+    
+    ]
+}

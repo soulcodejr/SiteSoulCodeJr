@@ -7,12 +7,16 @@ import "./Home.css";
 
 
 import "./Home.css";
+import Portfolio from "../sections/Projetos";
+import Feedback from "../sections/Feedback";
 
 export default function Home() {
   return (
     <div className="home">
       <Services />
       <Plans />
+      <Portfolio />
+      <Feedback />
       <Duvidas />
       <Contrate />
     </div>

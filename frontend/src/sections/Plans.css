@@ -72,8 +72,6 @@
     outline: none;
 }
 
-
-
 .plans__list {
     display: grid;
 
@@ -102,7 +100,6 @@
         
         grid-column: span 2;
         justify-self: stretch;
-        
     }
 }
 
@@ -112,11 +109,8 @@
         height: fit-content;
     }
     .plans__list {
-
         width: 60%;
         grid-template-columns: 1fr; 
-
-
     }
 
     .plans__list > :nth-child(3) {
