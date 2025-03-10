@@ -5,7 +5,7 @@ import {
   MdOutlineLocationOn,
 } from "react-icons/md";
 
-import Form from "../components/Form";
+import HireForm from "../components/HireForm";
 
 import "./Contrate.css";
 
@@ -37,7 +37,7 @@ const Contrate = () => {
           </span>
         </div>
       </div>
-      <Form handleSubmit={() => console.log()} />
+      <HireForm handleSubmit={() => console.log()} />
     </div>
     </div>
 
