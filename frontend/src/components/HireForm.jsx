@@ -2,7 +2,7 @@ import React from 'react'
 
 import './Form.css'
 
-const Form = ({handleSubmit}) => {
+const HireForm = ({handleSubmit}) => {
   return (
     <form onSubmit={handleSubmit()} className='form-container'>
       <label>
@@ -27,4 +27,4 @@ const Form = ({handleSubmit}) => {
   )
 }
 
-export default Form
+export default HireForm

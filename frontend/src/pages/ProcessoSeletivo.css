@@ -1,0 +1,11 @@
+.process-container {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 80vh;
+  margin-top: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}

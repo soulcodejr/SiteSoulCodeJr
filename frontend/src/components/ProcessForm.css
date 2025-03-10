@@ -1,0 +1,14 @@
+.outer-process-form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 40px;
+}
+
+@media(max-width: 1000px){
+  .outer-process-form{
+    width: 80%;
+  }
+}
