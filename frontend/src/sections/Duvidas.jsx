@@ -1,5 +1,6 @@
 
 import CardDuvidas from '../components/CardDuvidas';
+import HeaderSection from '../components/HeaderSection';
 
 import perguntas from '../data/FAQ.json';
 
@@ -8,10 +9,11 @@ import './Duvidas.css';
 const Duvidas = () => {
     return (
         <div className='duvidas-container'>
-            <button className='section-button'>Dúvidas</button>
-            <h1 className='outfit-bold'>Dúvidas gerais</h1>
-            <h3 className='outfit-normal'>Informações gerais</h3>
-            <div className="duvidas-lista beam">
+            <HeaderSection 
+                title="Dúvidas Gerais"
+                subtitle="Informações Gerais"
+                button_title="Dúvidas"
+            />
                 {perguntas.map((item, index) => (
                     <CardDuvidas
                         key={index}
@@ -20,7 +22,7 @@ const Duvidas = () => {
                     />
                 ))}
 
-            </div>
+           
         </div>
     );
 }
