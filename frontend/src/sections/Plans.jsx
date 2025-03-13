@@ -32,17 +32,12 @@ const Plans = () => {
                  title="Planos de assinatura"
                  subtitle="Preços"
                  button_title="Planos"
-            >
-                <div>
-                    <PlanSelector
+            />
+            <PlanSelector
                         planType={planType}
                         onPlanChange={setPlanType}
                         className='plans-selector__container'
-                    />
-                </div>
-            </HeaderSection>
-
-           
+            />
             <div className="plans__list beam">
                 {getAdjustedPlans().map((plan, index) => (
                     <PlansCard key={index} plan={plan} />

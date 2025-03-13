@@ -9,13 +9,14 @@ const HeaderSection = ( { title, subtitle, button_title, children } ) => {
             <div className='header__div outfit-normal'>
                 <button className="section-button">{button_title}</button>
                 
-                <div className='header-extra-content'>
-                    {children}
-                </div>
+                
                 
                 <div className='header-text__div'>
                     <h2 className=''>{title}</h2>
                     <h3>{subtitle}</h3>
+                </div>
+                <div className='header-extra-content'>
+                    {children}
                 </div>
             </div>
         </div>

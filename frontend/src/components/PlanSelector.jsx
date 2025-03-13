@@ -1,4 +1,4 @@
-
+import './PlanSelector.css'
 
 const PlanSelector = ( { planType, onPlanChange } ) => {
     console.log(`PLAN TYPE AQUI:${planType}`)
