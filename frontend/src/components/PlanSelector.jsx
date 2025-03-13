@@ -1,9 +1,7 @@
 import './PlanSelector.css'
 
 const PlanSelector = ( { planType, onPlanChange } ) => {
-    console.log(`PLAN TYPE AQUI:${planType}`)
-    console.log(`ON PLAN CHANGE AQUI:${onPlanChange}`)
-    
+   
     return (
         <div className="plan-selector__div">      
             <div className='plans__button-group'>

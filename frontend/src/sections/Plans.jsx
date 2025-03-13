@@ -11,8 +11,6 @@ const Plans = () => {
     const [planType, setPlanType] = useState('annual');
 
     const getAdjustedPlans = () => {
-        console.log(`PlansData.plans::::${PlansData.plans}`)
-        console.log(`PlansData.plans.price::::${ PlansData.plans.annualPrice}`)
         return PlansData.plans.map((plan) => {
             if (planType === 'annual' && plan.price !== 'Custom') {
                 const monthlyPrice = plan.price;
