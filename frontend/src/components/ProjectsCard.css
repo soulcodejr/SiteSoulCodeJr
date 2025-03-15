@@ -1,0 +1,84 @@
+.card__div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: linear-gradient(149deg, rgba(81, 47, 235, 0.15) 0%, rgba(255, 255, 255, 0.06) 29%, rgba(255, 255, 255, 0.06) 74%, rgba(81, 47, 235, 0.15) 100%);
+    padding: 20px 30px;
+    border-radius: 30px;
+    box-sizing: border-box;
+    height: fit-content;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 355px;
+    width: 100%;
+    
+}
+
+.project__icon {
+    background-color: rgba(255, 255, 255, 20%);
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+.card-title > h2{
+    font-size: 22px; 
+    line-height: 1.2rem;
+}
+
+.card-description > p {
+    font-size: 16px;
+    line-height: 1.4em;
+    color: rgba(255,255,255,0.7);   
+    margin: 0; 
+    text-align: start;
+}
+
+.card-image > img {
+    width: 46px;
+    height: 46px;
+    border-radius: 8px;
+}
+
+.projects__div .project-card__div p {
+    font-size: 16px;
+    
+
+}
+
+.client-info__div {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.card-client__header {
+    margin-left: 20px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.card-client__header > p{
+    margin: 0;
+}
+
+.client-name {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5em;
+}
+
+.client-role {
+    font-size: 12;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.2em;
+}
+
+
+@media (max-width: 768px) {
+    .card__div {
+        max-width: 100%;
+    }
+}
