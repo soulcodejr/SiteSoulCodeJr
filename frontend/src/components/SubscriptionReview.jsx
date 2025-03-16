@@ -15,10 +15,10 @@ const SubscriptionReview = ({data}) => {
           <li> <span>Área de atuação:</span> {data.area}</li>
         </ul>
         <div className="about-box outfit-normal">
-          <p className="about-text">
+          <div className="about-text">
             <span>Sobre você: </span>
-            { data.about}
-          </p>
+            <p>{ data.about}</p>
+          </div>
         </div>
       </div>
     </div>

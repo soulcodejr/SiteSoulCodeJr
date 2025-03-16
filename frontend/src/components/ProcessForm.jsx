@@ -11,7 +11,7 @@ const ProcessForm = ({data, updateData}) => {
   return (
     <div className="outer-process-form">
       <h1 className="outfit-bold">Prencha as informações da sua inscrição!</h1>
-      <form className="form-container">
+      <form className="form-container" onSubmit={() => {}}>
         <label>
           <p>Nome</p>
           <input
@@ -25,6 +25,7 @@ const ProcessForm = ({data, updateData}) => {
         <label>
           <p>Email</p>
           <input
+            id="email-input-process"
             type="email"
             placeholder="Ex: soulcodejr@gmail.com"
             value={data.email}

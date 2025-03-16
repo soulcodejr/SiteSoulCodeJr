@@ -38,7 +38,15 @@
   .about-box {
     width: 50%;
     text-align: start;
+    max-width: 450px;
+
+    & p{
+      max-width: 400px;
+      text-overflow: clip;
+    }
   }
+
+
 }
 
 @media (max-width: 800px) {

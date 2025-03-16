@@ -1,4 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState} from "react";
+import { ToastContainer, toast } from 'react-toastify';
+
 import SelectArea from "../sections/SelectArea";
 import ProcessForm from "../components/ProcessForm";
 import SubscriptionReview from "../components/SubscriptionReview";
@@ -51,12 +53,51 @@ export default function ProcessoSeletivo() {
           : setStepCounter(currentStep);
         break;
       case 1:
-        allFilled(data) == true
-          ? setStepCounter(currentStep + 1)
-          : setStepCounter(currentStep);
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (allFilled(data) == false) {
+          toast.error('Você precisa preencher todos os campos antes de avançar', {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          });
+          return;
+        }
+        if (!emailRegex.test(document.getElementById("email-input-process").value)) {
+          toast.error('Coloque um e-mail válido', {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          });
+          return;
+        }
+
+        setStepCounter(stepCounter + 1)
+
+
         break;
       case 2:
-        console.log("Formulário enviado!")
+        toast.success('Formulário enviado!', {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: false,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+          });
         break;
     }
   };
@@ -68,12 +109,24 @@ export default function ProcessoSeletivo() {
         type="submit"
         className="primary-btn"
         onClick={(e) => nextStep(e, stepCounter)}
-      >
+        >
         {stepCounter != 2 ? "Avançar" : "Enviar!"}
       </button>
       {stepCounter != 0 && (
         <button onClick={() => setStepCounter(stepCounter - 1)}>Voltar</button>
       )}
+      <ToastContainer
+      position="top-right"
+      autoClose={5000}
+      hideProgressBar={false}
+      newestOnTop={false}
+      closeOnClick={false}
+      rtl={false}
+      pauseOnFocusLoss
+      draggable
+      pauseOnHover
+      theme="dark"
+      />
     </div>
   );
 }

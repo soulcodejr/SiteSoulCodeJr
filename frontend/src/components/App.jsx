@@ -4,7 +4,6 @@ import Footer from "./Footer";
 import Navbar from "./Navbar";
 import Home from "../pages/Home";
 import ProcessoSeletivo from "../pages/ProcessoSeletivo";
-import NossaEquipe from "../pages/NossaEquipe";
 
 function App() {
   return (
