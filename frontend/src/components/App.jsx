@@ -17,10 +17,7 @@ function App() {
             element={<ProcessoSeletivo />}
             path="/SiteSoulCodeJr/processo-seletivo"
           />
-          <Route
-            element={<NotFound />}
-            path="/SiteSoulCodeJr/not-found"
-          />
+          <Route element={<NotFound />} path="*" />
         </Routes>
       </BrowserRouter>
       <Footer />
