@@ -1,3 +1,7 @@
+.container {
+    height: 70vh;
+}
+
 .main-text {
     margin-top: 120px;
     font-family: "Outfit", serif;
