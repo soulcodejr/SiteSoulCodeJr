@@ -1,30 +1,4 @@
 
-.duvidas-container {
-
-    margin: 10rem auto;
-    padding: 2.5rem;
-    transition: 0.6s ease-out, transform 0.6s ease-out;
-}
-
-
-.duvidas-container,
-.duvidas-container * {
-    font-family: "Outfit", sans-serif;
-}
-
-.duvidas-resposta p {
-    background-color: transparent;
-}
-
-.duvidas-container h1 {
-    margin-bottom: 10px;
-}
-
-.duvidas-container h3 {
-    color: rgba(255,255,255,80%);
-    margin-bottom: 60px;
-}
-
 
 .duvidas-lista {
     display: flex;

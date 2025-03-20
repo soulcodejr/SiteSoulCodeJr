@@ -1,10 +1,16 @@
 import CardEquipe from "../components/CardEquipe"
 import estefanioImage from '../assets/estefanio.jpg'; 
+import HeaderSection from "../components/HeaderSection";
 
 function NossaEquipe() {
     return (
         <div>
-            <h1>Uma equipe de excelência    </h1>
+
+            <HeaderSection 
+                 title="Uma equipe de excelência"
+                 subtitle="Equipe SoulCodejr"
+                 button_title="Equipe"
+            />
             <div className="card__container">
                 <CardEquipe image={estefanioImage}  name="Estefanio Silva" role="Presidente e PM"/>
                 <CardEquipe name="Ausberto" role="Eng. de Software" />
