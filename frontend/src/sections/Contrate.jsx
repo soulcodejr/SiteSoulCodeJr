@@ -8,11 +8,14 @@ import {
 import HireForm from "../components/HireForm";
 
 import "./Contrate.css";
+import HeaderSection from "../components/HeaderSection";
 
 const Contrate = () => {
   return (
     <div className="outer">
-      <button className="section-button">Contatos</button>
+      <HeaderSection 
+        button_title={"Contatos"}
+      />
       <div className="contrate-container outfit-normal">
       <div className="text-container">
         <h2>Tem interesse em nos contratar?</h2>
