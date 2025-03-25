@@ -1,12 +1,12 @@
 import CardEquipe from "../components/CardEquipe"
-import estefanioImage from '../assets/estefanio.jpg'; 
+import estefanioImage from '../assets/estefanio.jpg';
 import HeaderSection from "../components/HeaderSection";
 
 function NossaEquipe() {
     return (
-        <div>
+        <div id="team">
 
-            <HeaderSection 
+            <HeaderSection
                  title="Uma equipe de excelência"
                  subtitle="Equipe SoulCodejr"
                  button_title="Equipe"

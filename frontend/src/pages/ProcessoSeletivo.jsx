@@ -53,7 +53,7 @@ export default function ProcessoSeletivo() {
         sector: data.area,
       });
 
-      console.log(response)
+      console.log(response);
 
       if (!response) {
         throw new Error();
@@ -90,7 +90,16 @@ export default function ProcessoSeletivo() {
       case 0:
         data.area != ""
           ? setStepCounter(currentStep + 1)
-          : setStepCounter(currentStep);
+          : toast.error("É necessário escolher uma área para prosseguir!", {
+              position: "top-right",
+              autoClose: 3000,
+              hideProgressBar: false,
+              closeOnClick: false,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "dark",
+            });
         break;
       case 1:
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

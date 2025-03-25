@@ -18,26 +18,28 @@ const Navbar = () => {
   return (
     <div className="navbar-container">
       <div className="image-container">
+        <a href="/SiteSoulCodeJr" className="logo-box">
         <img src={logo} alt="SoulCode Logo" className="logo" />
         {width > 800 ? <h2>SoulCodeJr</h2> : ""}
+        </a>
 
 
       </div>
       <div className="center-navs-container">
         <nav>
-          <a href="/SiteSoulCodeJr/nossa-equipe">Equipe</a>
+          <a href="/SiteSoulCodeJr/#team">Equipe</a>
         </nav>
         <nav>
-          <a href="">Serviços</a>
+          <a href="/SiteSoulCodeJr/#services">Serviços</a>
         </nav>
         <nav>
-          <a href="">Projetos</a>
+          <a href="/SiteSoulCodeJr/#projects">Projetos</a>
         </nav>
         <nav>
-          <a href="">Planos</a>
+          <a href="/SiteSoulCodeJr/#plans">Planos</a>
         </nav>
         <nav>
-          <a href="">Contato</a>
+          <a href="/SiteSoulCodeJr/#contacts">Contato</a>
         </nav>
       </div>
 

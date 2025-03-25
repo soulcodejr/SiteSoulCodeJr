@@ -14,8 +14,8 @@ import HeaderSection from "../components/HeaderSection";
 const Contrate = () => {
 
   return (
-    <div className="outer">
-      <HeaderSection 
+    <div className="outer" id="contacts">
+      <HeaderSection
         button_title={"Contatos"}
       />
       <div className="contrate-container outfit-normal">

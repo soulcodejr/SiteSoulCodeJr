@@ -15,6 +15,18 @@
   display: flex;
   align-items: center;
   gap: 4px;
+
+  & .logo-box{
+    display: inherit;
+    align-items: inherit;
+    gap: inherit;
+  }
+
+  & .logo-box:hover{
+    color: #FFF;
+    opacity: .6;
+    letter-spacing: 0px;
+  }
 }
 
 #process-btn{

@@ -25,8 +25,8 @@ const Plans = () => {
     };
 
     return (
-        <div className='plans__container outfit-normal'>
-            <HeaderSection 
+        <div className='plans__container outfit-normal' id='plans'>
+            <HeaderSection
                  title="Planos de assinatura"
                  subtitle="Preços"
                  button_title="Planos"
