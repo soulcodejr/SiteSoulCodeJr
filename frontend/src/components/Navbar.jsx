@@ -42,10 +42,14 @@ const Navbar = () => {
       </div>
 
       <a href="/SiteSoulCodeJr/processo-seletivo">
-        <button class="botao">
-          <p class="transicao1">Processo seletivo &#129125;</p>
-          <p class="transicao2">Processo seletivo &#129122;</p>
-        </button>
+      {width > 800 ? 
+        <button id="process-btn" className="botao nav-bar-btn">
+          <p className="transicao1">Processo seletivo &#129125;</p>
+          <p className="transicao2">Processo seletivo &#129122;</p>
+        </button> : <button id="process-btn" className="botao nav-bar-btn">
+          <p className="transicao1"> &#129125;</p>
+          <p className="transicao2"> &#129122;</p>
+        </button>}
       </a>
 
       {/*<a href="/SiteSoulCodeJr/processo-seletivo">
