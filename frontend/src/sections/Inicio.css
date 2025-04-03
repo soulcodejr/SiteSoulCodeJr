@@ -1,0 +1,87 @@
+:root {
+    /*Isso aqui -- é pra criar variáveis*/
+    --total-icon: 4; 
+    --icon-width: 100px;
+    --total-icon-width: calc(var(--total-icon) * var(--icon-width) * 2) 
+}
+
+.carrossel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    top: 30px;
+    height: 200px;
+    width: 90%;
+    mask-image: linear-gradient(to right, transparent, #000, transparent);
+}
+
+.carrossel::after, .carrossel::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: var(--icon-width);
+}
+
+.carrossel::after {
+    background: linear-gradient(to right, #ffffff00 0%, #0000 100%);
+    left: 0%;
+}
+
+.carrossel::before {
+    background: linear-gradient(to left, #ffffff00 0%, #0000 100%);
+    right: 0%;
+}
+
+.itens_carrossel {
+    width: var(--total-icon-width);
+    display: flex;
+    animation: loop_carrossel 8s linear infinite;
+}
+
+.imagem_carrossel {
+    width: var(--icon-width);
+    display: flex;
+    margin-left: 80px;
+    height: auto;
+}
+
+@keyframes loop_carrossel {
+    100% {transform: translateX(calc(-180%/2));} /*Velocidade do giro do carrossel*/
+}
+
+.centraliza {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.principal {
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.soulcodejr {
+    margin: 10px;
+}
+
+.texto {
+    margin-bottom: 30px;
+}
+
+.botoes {
+    display: flex;
+    gap: 20px;
+}
+
+.conteudos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 50px;
+    padding-bottom: 150px;
+}
