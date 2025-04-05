@@ -11,10 +11,12 @@ import "./Home.css";
 import "./Home.css";
 import Portfolio from "../sections/Projetos";
 import Feedback from "../sections/Feedback";
+import Inicio from "../sections/Inicio";
 
 export default function Home() {
   return (
     <div className="home">
+      <Inicio />
       <Services />
       <Plans />
       <NossaEquipe />
