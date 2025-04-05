@@ -1,5 +1,7 @@
-import { useState} from "react";
-import { ToastContainer, toast } from 'react-toastify';
+import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+
+import api from "../axios/config";
 
 import SelectArea from "../sections/SelectArea";
 import ProcessForm from "../components/ProcessForm";
@@ -8,7 +10,6 @@ import SubscriptionReview from "../components/SubscriptionReview";
 import "./ProcessoSeletivo.css";
 
 export default function ProcessoSeletivo() {
-
   //template para os dados que devem ser preenchidos
   const dataTemplate = {
     area: "",
@@ -43,6 +44,45 @@ export default function ProcessoSeletivo() {
     return Object.values(data).every((value) => value != "");
   };
 
+  const saveCandidate = async () => {
+    try {
+      const response = await api.post("/candidates/insert", {
+        name: data.name,
+        email: data.email,
+        registration: data.course,
+        sector: data.area,
+      });
+
+      console.log(response);
+
+      if (!response) {
+        throw new Error();
+      }
+
+      toast.success("Formulário enviado!", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
+    } catch (error) {
+      toast.error("Erro na submissão do formulário", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
+    }
+  };
+
   //função que permite o usuário passar para próxima etapa do formulário e envia caso seja o último passo
   const nextStep = (e, currentStep) => {
     e.preventDefault();
@@ -50,27 +90,40 @@ export default function ProcessoSeletivo() {
       case 0:
         data.area != ""
           ? setStepCounter(currentStep + 1)
-          : setStepCounter(currentStep);
+          : toast.error("É necessário escolher uma área para prosseguir!", {
+              position: "top-right",
+              autoClose: 3000,
+              hideProgressBar: false,
+              closeOnClick: false,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "dark",
+            });
         break;
       case 1:
-
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
         if (allFilled(data) == false) {
-          toast.error('Você precisa preencher todos os campos antes de avançar', {
-            position: "top-right",
-            autoClose: 3000,
-            hideProgressBar: false,
-            closeOnClick: false,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "dark",
-          });
+          toast.error(
+            "Você precisa preencher todos os campos antes de avançar",
+            {
+              position: "top-right",
+              autoClose: 3000,
+              hideProgressBar: false,
+              closeOnClick: false,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "dark",
+            }
+          );
           return;
         }
-        if (!emailRegex.test(document.getElementById("email-input-process").value)) {
-          toast.error('Coloque um e-mail válido', {
+        if (
+          !emailRegex.test(document.getElementById("email-input-process").value)
+        ) {
+          toast.error("Coloque um e-mail válido", {
             position: "top-right",
             autoClose: 3000,
             hideProgressBar: false,
@@ -83,21 +136,12 @@ export default function ProcessoSeletivo() {
           return;
         }
 
-        setStepCounter(stepCounter + 1)
-
+        setStepCounter(stepCounter + 1);
 
         break;
       case 2:
-        toast.success('Formulário enviado!', {
-          position: "top-right",
-          autoClose: 3000,
-          hideProgressBar: false,
-          closeOnClick: false,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "dark",
-          });
+        const response = saveCandidate();
+
         break;
     }
   };
@@ -109,23 +153,23 @@ export default function ProcessoSeletivo() {
         type="submit"
         className="primary-btn"
         onClick={(e) => nextStep(e, stepCounter)}
-        >
+      >
         {stepCounter != 2 ? "Avançar" : "Enviar!"}
       </button>
       {stepCounter != 0 && (
         <button onClick={() => setStepCounter(stepCounter - 1)}>Voltar</button>
       )}
       <ToastContainer
-      position="top-right"
-      autoClose={5000}
-      hideProgressBar={false}
-      newestOnTop={false}
-      closeOnClick={false}
-      rtl={false}
-      pauseOnFocusLoss
-      draggable
-      pauseOnHover
-      theme="dark"
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
       />
     </div>
   );

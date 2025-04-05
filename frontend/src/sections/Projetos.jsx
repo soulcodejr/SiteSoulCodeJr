@@ -14,12 +14,12 @@ const Projetos = () => {
             'NaRede': <TrendUp size={28} className="project__icon" />,
         };
         return icons[name] || <TrendUp size={28} className="project__icon" />;
-    }; 
+    };
 
     return (
 
-            <div className='projects__div three-cards'>           
-                <HeaderSection 
+            <div className='projects__div three-cards' id='projects'>
+                <HeaderSection
                     title={"Um pouco do nosso trabalho"}
                     subtitle={"Projetos concluídos pela SCjr"}
                     button_title={"Projetos"}
@@ -27,16 +27,16 @@ const Projetos = () => {
 
                 <div className='card__container three-cards'>
                     {data.projects.map((project, index) => (
-                        <ProjectsCard 
+                        <ProjectsCard
                             key={index}
-                            icon={getProjectIcon(project.name)} 
+                            icon={getProjectIcon(project.name)}
                             title={project.name}
-                            description={project.description}  
+                            description={project.description}
                         />
-                    ))} 
+                    ))}
                 </div>
             </div>
     );
 }
- 
+
 export default Projetos;
