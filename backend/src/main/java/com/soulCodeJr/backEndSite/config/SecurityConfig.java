@@ -19,6 +19,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 @EnableWebSecurity
 public class SecurityConfig {
 
+
    @Autowired
    private AdminService adminService;
 
