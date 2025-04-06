@@ -1,7 +1,6 @@
 package com.soulCodeJr.backEndSite.controllers;
 
 import com.soulCodeJr.backEndSite.dto.CandidateDTO;
-import com.soulCodeJr.backEndSite.entities.Candidate;
 import com.soulCodeJr.backEndSite.services.CandidateService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

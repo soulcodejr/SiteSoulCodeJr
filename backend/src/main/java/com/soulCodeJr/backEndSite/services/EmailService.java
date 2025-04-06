@@ -2,7 +2,6 @@ package com.soulCodeJr.backEndSite.services;
 
 
 import com.soulCodeJr.backEndSite.dto.EmailDTO;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
@@ -14,7 +13,8 @@ public class EmailService {
     @Autowired
     private JavaMailSender sender;
 
-    public void sendEmail(EmailDTO dto){
+
+    public void externalEmail(EmailDTO dto){
 
         SimpleMailMessage message = new SimpleMailMessage();
 
@@ -27,4 +27,19 @@ public class EmailService {
         sender.send(message);
 
     }
+
+    public void internalEmail(EmailDTO dto){
+
+        SimpleMailMessage message = new SimpleMailMessage();
+
+        message.setFrom(dto.getFromWho());
+        message.setTo(dto.getToWho());
+        message.setSubject(dto.getTittle());
+        message.setText("Olá, " + dto.getOwner() + "\n\n" + dto.getMessage());
+
+        sender.send(message);
+
+    }
+
+
 }
