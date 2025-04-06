@@ -18,35 +18,49 @@ const Navbar = () => {
   return (
     <div className="navbar-container">
       <div className="image-container">
+        <a href="/SiteSoulCodeJr" className="logo-box">
         <img src={logo} alt="SoulCode Logo" className="logo" />
         {width > 800 ? <h2>SoulCodeJr</h2> : ""}
+        </a>
 
 
       </div>
       <div className="center-navs-container">
         <nav>
-          <a href="">Equipe</a>
+          <a href="/SiteSoulCodeJr/#team">Equipe</a>
         </nav>
         <nav>
-          <a href="">Serviços</a>
+          <a href="/SiteSoulCodeJr/#services">Serviços</a>
         </nav>
         <nav>
-          <a href="">Projetos</a>
+          <a href="/SiteSoulCodeJr/#projects">Projetos</a>
         </nav>
         <nav>
-          <a href="">Planos</a>
+          <a href="/SiteSoulCodeJr/#plans">Planos</a>
         </nav>
         <nav>
-          <a href="">Contato</a>
+          <a href="/SiteSoulCodeJr/#contacts">Contato</a>
         </nav>
       </div>
 
       <a href="/SiteSoulCodeJr/processo-seletivo">
+      {width > 800 ? 
+        <button id="process-btn" className="botao nav-bar-btn">
+          <p className="transicao1">Processo seletivo &#129125;</p>
+          <p className="transicao2">Processo seletivo &#129122;</p>
+        </button> : <button id="process-btn" className="botao nav-bar-btn">
+          <p className="transicao1"> &#129125;</p>
+          <p className="transicao2"> &#129122;</p>
+        </button>}
+      </a>
+
+      {/*<a href="/SiteSoulCodeJr/processo-seletivo">
         <button id="process-btn" className="primary-btn">
           {width > 800 ? <p>Processo Seletivo</p> : ""}
           <MdArrowOutward />
         </button>
       </a>
+      */}
     </div>
   );
 };

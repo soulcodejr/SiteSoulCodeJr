@@ -15,6 +15,18 @@
   display: flex;
   align-items: center;
   gap: 4px;
+
+  & .logo-box{
+    display: inherit;
+    align-items: inherit;
+    gap: inherit;
+  }
+
+  & .logo-box:hover{
+    color: #FFF;
+    opacity: .6;
+    letter-spacing: 0px;
+  }
 }
 
 #process-btn{
@@ -71,4 +83,57 @@
   .center-navs-container nav a{
     font-size: 14px;
   }
+}
+
+.botao {
+  position: relative;
+  width: 130px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #535bf2;
+}
+
+.botao.nav-bar-btn {
+  width: auto;
+  height: auto;
+}
+
+.botao.preto {
+  background-color: #000000;
+}
+
+.botao:hover .transicao2 {
+  transform: translateY(-50%);
+  top: 50%;
+}
+
+.botao:hover .transicao1 {
+  transform: translateY(-250%);
+}
+
+@media only screen and (min-width: 800px) {
+  .botao.nav-bar-btn {
+    width: 130px;
+    height: 30px;
+}
+}
+
+
+
+.transicao2 {
+  position: absolute;
+  top: 100%;
+  font-size: 12px;
+  transition: transform 0.5s , top 0.5s;
+}
+
+.transicao1 {
+  position: absolute;   
+  font-size: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.5s;
 }

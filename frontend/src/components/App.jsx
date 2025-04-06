@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import Navbar from "./Navbar";
 import Home from "../pages/Home";
 import ProcessoSeletivo from "../pages/ProcessoSeletivo";
+import NotFound from "../pages/NotFound";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             element={<ProcessoSeletivo />}
             path="/SiteSoulCodeJr/processo-seletivo"
           />
+          <Route element={<NotFound />} path="*" />
         </Routes>
       </BrowserRouter>
       <Footer />
