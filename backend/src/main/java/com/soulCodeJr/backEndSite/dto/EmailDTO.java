@@ -7,6 +7,7 @@ public class EmailDTO {
 
 
     private String owner;
+
     @NotBlank(message = "Campo requerido")
     private String fromWho;
 

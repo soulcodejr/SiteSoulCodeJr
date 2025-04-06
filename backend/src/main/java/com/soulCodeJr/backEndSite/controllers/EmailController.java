@@ -21,13 +21,18 @@ public class EmailController {
     @Autowired
     private EmailService service;
 
-    @PostMapping
-    public ResponseEntity<EmailDTO> sendEmail(@Valid @RequestBody EmailDTO dto){
+    @PostMapping(value = "/external")
+    public ResponseEntity<EmailDTO> sendEmailExternal(@Valid @RequestBody EmailDTO dto){
 
-        service.sendEmail(dto);
+        service.externalEmail(dto);
         return ResponseEntity.ok(dto);
 
     }
 
+    @PostMapping(value = "/internal")
+    public ResponseEntity<EmailDTO> sendEmailInternal(@Valid @RequestBody EmailDTO dto){
+        service.internalEmail(dto);
+        return ResponseEntity.ok(dto);
+    }
 
 }
