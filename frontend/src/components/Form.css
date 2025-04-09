@@ -50,6 +50,14 @@ button#form-button.primary-btn{
   margin-top: 8px;
 }
 
+button.primary-btn.sending{
+  background-color: transparent;
+  color: var(--main-blue);
+  letter-spacing: .5px;
+  border-color: var(--main-blue);
+  cursor: default;
+}
+
 @media (max-width: 1000px){
   .form-container{
     width: 100%;
