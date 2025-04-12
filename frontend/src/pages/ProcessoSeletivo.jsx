@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { ToastContainer, toast } from "react-toastify";
 
 import api from "../axios/config";
@@ -24,6 +24,9 @@ export default function ProcessoSeletivo() {
   //state para identificar em qual passo do formulário o usuário está
   const [stepCounter, setStepCounter] = useState(0);
 
+  const emailRef = useRef(null);
+  const [isSending, setIsSending] = useState(false);
+
   //função que atualiza deteminado campo no state de dados do usuário
   //passada para os componentes via props
   const updateData = (key, value) => {
@@ -45,6 +48,30 @@ export default function ProcessoSeletivo() {
   };
 
   const saveCandidate = async () => {
+    if (emailRef.current == data.email) {
+      toast.info(
+        "Esse e-mail acabou de ser cadastrado! Confira sua caixa de mensagens antes de tentar novamente.",
+        {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: false,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        }
+      );
+      setIsSending(true)
+
+      setTimeout(() => {
+        setIsSending(false)
+      }, 5000)
+
+      return;
+    }
+
+    setIsSending(true);
     try {
       const response = await api.post("/candidates/insert", {
         name: data.name,
@@ -53,11 +80,11 @@ export default function ProcessoSeletivo() {
         sector: data.area,
       });
 
-      console.log(response);
-
       if (!response) {
         throw new Error();
       }
+
+      emailRef.current = data.email;
 
       toast.success("Formulário enviado!", {
         position: "top-right",
@@ -80,6 +107,8 @@ export default function ProcessoSeletivo() {
         progress: undefined,
         theme: "dark",
       });
+    } finally {
+      setIsSending(false);
     }
   };
 
@@ -151,7 +180,8 @@ export default function ProcessoSeletivo() {
       {steps[stepCounter]}
       <button
         type="submit"
-        className="primary-btn"
+        className={`primary-btn ${isSending ? "sending" : ""}`}
+        disabled={isSending}
         onClick={(e) => nextStep(e, stepCounter)}
       >
         {stepCounter != 2 ? "Avançar" : "Enviar!"}

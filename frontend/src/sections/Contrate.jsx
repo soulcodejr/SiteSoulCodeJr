@@ -4,7 +4,6 @@ import {
   MdOutlinePhone,
   MdOutlineLocationOn,
 } from "react-icons/md";
-import { toast } from "react-toastify";
 
 import HireForm from "../components/HireForm";
 
